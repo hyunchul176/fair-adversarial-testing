@@ -1,0 +1,32 @@
+{
+  "title": "fairtest: code, models and case files for fair adversarial testing of automated vehicles in highway cut-ins",
+  "upload_type": "software",
+  "description": "<p>Companion code of the paper \"Fair adversarial testing of automated vehicles in highway cut-ins: reference-shielded attacks and a capability-controlled evaluation\". It contains the agent, the systems under test, the reference drivers, the shield, the searches, the analyses and the dataset extractors, the trained models, the case identifiers and derived case files, and the Autoware and CARLA files. The documentation that the paper cites is in the docs folder.</p>",
+  "creators": [
+    {
+      "name": "Park, Hyunchul",
+      "affiliation": "Cho Chun Shik Graduate School of Mobility, Korea Advanced Institute of Science and Technology (KAIST), Daejeon, South Korea"
+    },
+    {
+      "name": "Oh, Taeho",
+      "affiliation": "Cho Chun Shik Graduate School of Mobility, Korea Advanced Institute of Science and Technology (KAIST), Daejeon, South Korea"
+    },
+    {
+      "name": "Liu, Yonghui",
+      "affiliation": "Cho Chun Shik Graduate School of Mobility, Korea Advanced Institute of Science and Technology (KAIST), Daejeon, South Korea"
+    },
+    {
+      "name": "Kim, Inhi",
+      "affiliation": "Cho Chun Shik Graduate School of Mobility, Korea Advanced Institute of Science and Technology (KAIST), Daejeon, South Korea"
+    }
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "automated vehicles",
+    "adversarial testing",
+    "safety assessment",
+    "reinforcement learning",
+    "reference driver",
+    "scenario-based testing"
+  ]
+}
