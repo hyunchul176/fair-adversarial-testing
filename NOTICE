@@ -1,0 +1,23 @@
+Fair adversarial testing of automated vehicles in highway cut-ins: reproducibility package
+
+Copyright 2026 Korea Advanced Institute of Science and Technology (KAIST)
+[Provisional: to be confirmed with the corresponding author and the KAIST office before the repository is made public.]
+
+Authors: Hyunchul Park, Taeho Oh, Yonghui Liu and Inhi Kim (corresponding author).
+This research was supported by a grant (code RS-2023-00233952) from the R&D Program funded by the Ministry of Land,
+Infrastructure and Transport of the Korean government.
+
+The code in this repository is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Third-party code and data keep their own terms:
+- code/fairtest/b68_cars_refs.py ports reference-model implementations of RoboSafe-Lab/CARS-code (commit 6e32a26),
+  licensed under the Apache License, Version 2.0.
+- cases/derived/mitra/ is derived from the MiTra dataset (CC BY 4.0); please cite the MiTra dataset.
+- cases/derived/tgsim_i294/ and cases/derived/ngsim_us101/ are derived from TGSIM and NGSIM (U.S. Department of
+  Transportation public data).
+- data_shared/natural_reference.json and models/bc_highd/ are derivative works of the highD dataset (levelXdata):
+  non-commercial use only; please cite R. Krajewski et al., "The highD Dataset," IEEE ITSC 2018.
+- cases/identifiers/ lists highD, exiD and HIGH-SIM cases by identifier only; these datasets are not included and are
+  obtained from their providers under their own terms.
+- Autoware Universe (Docker image ghcr.io/autowarefoundation/autoware:universe-20260420), CARLA 0.9.16 and highway-env
+  1.10.2 are used as released, under their own licenses.

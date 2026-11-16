@@ -1,0 +1,69 @@
+{
+ "a": {
+  "trajectories": 514,
+  "agreement_transfer": 67.1,
+  "agreement_sut": 66.1,
+  "agreement_cc": 99.4,
+  "by_sut": {
+   "following_H0": {
+    "n": 171,
+    "mustang": 90.6,
+    "tesla": 59.6,
+    "tesla_cc_hit": 0.0,
+    "mustang_cc_hit": 0.0,
+    "tesla_sut_avoid": 40.4,
+    "mustang_sut_avoid": 9.4
+   },
+   "following_H0.5": {
+    "n": 160,
+    "mustang": 40.6,
+    "tesla": 3.1,
+    "tesla_cc_hit": 5.0,
+    "mustang_cc_hit": 5.0,
+    "tesla_sut_avoid": 95.6,
+    "mustang_sut_avoid": 56.2
+   },
+   "following_H1": {
+    "n": 51,
+    "mustang": 9.8,
+    "tesla": 0.0,
+    "tesla_cc_hit": 31.4,
+    "mustang_cc_hit": 33.3,
+    "tesla_sut_avoid": 100.0,
+    "mustang_sut_avoid": 80.4
+   },
+   "reference_idm_H0": {
+    "n": 171,
+    "mustang": 90.1,
+    "tesla": 59.1,
+    "tesla_cc_hit": 1.2,
+    "mustang_cc_hit": 1.8,
+    "tesla_sut_avoid": 39.8,
+    "mustang_sut_avoid": 8.2
+   },
+   "following_aeb_H0": {
+    "n": 9,
+    "mustang": 0.0,
+    "tesla": 0.0,
+    "tesla_cc_hit": 0.0,
+    "mustang_cc_hit": 33.3,
+    "tesla_sut_avoid": 100.0,
+    "mustang_sut_avoid": 100.0
+   },
+   "rss_sut_H0": {
+    "n": 3,
+    "mustang": 0.0,
+    "tesla": 0.0,
+    "tesla_cc_hit": 100.0,
+    "mustang_cc_hit": 100.0,
+    "tesla_sut_avoid": 100.0,
+    "mustang_sut_avoid": 0.0
+   }
+  }
+ },
+ "E15_H1": {
+  "mustang": 90.6,
+  "tesla": 59.6,
+  "supported": false
+ }
+}

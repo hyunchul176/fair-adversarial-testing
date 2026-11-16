@@ -1,0 +1,244 @@
+{
+ "dev": {
+  "following_H0": {
+   "n": 171,
+   "proportional": 0.9064,
+   "metric": 0.5906,
+   "n_metric": 171
+  },
+  "following_H0.5": {
+   "n": 160,
+   "proportional": 0.4062,
+   "metric": 0.1062,
+   "n_metric": 160
+  },
+  "following_H1": {
+   "n": 51,
+   "proportional": 0.098,
+   "metric": 0.0,
+   "n_metric": 51
+  },
+  "reference_idm_H0": {
+   "n": 171,
+   "proportional": 0.9006,
+   "metric": 0.5965,
+   "n_metric": 171
+  },
+  "following_aeb_H0": {
+   "n": 9,
+   "proportional": 0.0,
+   "metric": 0.0,
+   "n_metric": 9
+  },
+  "rss_sut_H0": {
+   "n": 3,
+   "proportional": 0.0,
+   "metric": 0.0,
+   "n_metric": 3
+  }
+ },
+ "tgsim": {
+  "following_H0": {
+   "n": 195,
+   "proportional": 0.8513,
+   "metric": 0.5333,
+   "n_metric": 195
+  },
+  "following_H0.5": {
+   "n": 178,
+   "proportional": 0.3539,
+   "metric": 0.0618,
+   "n_metric": 178
+  },
+  "following_H1": {
+   "n": 97,
+   "proportional": 0.1753,
+   "metric": 0.0,
+   "n_metric": 97
+  },
+  "reference_idm_H0": {
+   "n": 198,
+   "proportional": 0.8182,
+   "metric": 0.5556,
+   "n_metric": 198
+  },
+  "following_aeb_H0": {
+   "n": 36,
+   "proportional": 0.0,
+   "metric": 0.0,
+   "n_metric": 36
+  },
+  "following_aeb_H0.5": {
+   "n": 24,
+   "proportional": 0.0,
+   "metric": 0.0,
+   "n_metric": 24
+  },
+  "rss_sut_H0": {
+   "n": 3,
+   "proportional": 0.0,
+   "metric": 0.0,
+   "n_metric": 3
+  }
+ },
+ "mitra": {
+  "following_H0": {
+   "n": 351,
+   "proportional": 0.7236,
+   "metric": 0.584,
+   "n_metric": 351
+  },
+  "following_H0.5": {
+   "n": 301,
+   "proportional": 0.3156,
+   "metric": 0.1462,
+   "n_metric": 301
+  },
+  "following_H1": {
+   "n": 228,
+   "proportional": 0.25,
+   "metric": 0.0263,
+   "n_metric": 228
+  },
+  "reference_idm_H0": {
+   "n": 342,
+   "proportional": 0.7135,
+   "metric": 0.6111,
+   "n_metric": 342
+  },
+  "following_aeb_H0": {
+   "n": 156,
+   "proportional": 0.0962,
+   "metric": 0.0,
+   "n_metric": 156
+  },
+  "following_aeb_H0.5": {
+   "n": 123,
+   "proportional": 0.0244,
+   "metric": 0.0,
+   "n_metric": 123
+  },
+  "rss_sut_H0": {
+   "n": 63,
+   "proportional": 0.0476,
+   "metric": 0.0,
+   "n_metric": 63
+  },
+  "rss_lat_sut_H0": {
+   "n": 3,
+   "proportional": 0.0,
+   "metric": 0.0,
+   "n_metric": 3
+  }
+ },
+ "highsim": {
+  "following_H0": {
+   "n": 93,
+   "proportional": 0.8065,
+   "metric": 0.6667,
+   "n_metric": 93
+  },
+  "following_H0.5": {
+   "n": 85,
+   "proportional": 0.3294,
+   "metric": 0.1647,
+   "n_metric": 85
+  },
+  "following_H1": {
+   "n": 54,
+   "proportional": 0.0926,
+   "metric": 0.0,
+   "n_metric": 54
+  },
+  "reference_idm_H0": {
+   "n": 93,
+   "proportional": 0.8387,
+   "metric": 0.6237,
+   "n_metric": 93
+  },
+  "following_aeb_H0": {
+   "n": 24,
+   "proportional": 0.0,
+   "metric": 0.0,
+   "n_metric": 24
+  },
+  "following_aeb_H0.5": {
+   "n": 18,
+   "proportional": 0.0,
+   "metric": 0.0,
+   "n_metric": 18
+  }
+ },
+ "exid": {
+  "following_H0": {
+   "n": 291,
+   "proportional": 0.8351,
+   "metric": 0.5773,
+   "n_metric": 291
+  },
+  "following_H0.5": {
+   "n": 264,
+   "proportional": 0.3598,
+   "metric": 0.1326,
+   "n_metric": 264
+  },
+  "following_H1": {
+   "n": 122,
+   "proportional": 0.1557,
+   "metric": 0.0082,
+   "n_metric": 122
+  },
+  "reference_idm_H0": {
+   "n": 291,
+   "proportional": 0.8316,
+   "metric": 0.5808,
+   "n_metric": 291
+  },
+  "following_aeb_H0": {
+   "n": 54,
+   "proportional": 0.0,
+   "metric": 0.0,
+   "n_metric": 54
+  },
+  "following_aeb_H0.5": {
+   "n": 42,
+   "proportional": 0.0,
+   "metric": 0.0,
+   "n_metric": 42
+  },
+  "rss_sut_H0": {
+   "n": 12,
+   "proportional": 0.0,
+   "metric": 0.0,
+   "n_metric": 12
+  },
+  "rss_lat_sut_H0": {
+   "n": 3,
+   "proportional": 0.0,
+   "metric": 0.0,
+   "n_metric": 3
+  }
+ },
+ "E12_H1": {
+  "dev": {
+   "value": 0.5906,
+   "supported": false
+  },
+  "tgsim": {
+   "value": 0.5333,
+   "supported": false
+  },
+  "mitra": {
+   "value": 0.584,
+   "supported": false
+  },
+  "highsim": {
+   "value": 0.6667,
+   "supported": false
+  },
+  "exid": {
+   "value": 0.5773,
+   "supported": false
+  }
+ }
+}

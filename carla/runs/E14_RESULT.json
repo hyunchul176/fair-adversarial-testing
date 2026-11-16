@@ -1,0 +1,32 @@
+{
+ "n": 124,
+ "errors": 0,
+ "by": {
+  "ladder:following:0": {
+   "n": 62,
+   "first": 87.1,
+   "second": 85.5,
+   "diff_pp": -1.6,
+   "agreement": 98.4,
+   "both_success": 53,
+   "query_diff_median": 0.0,
+   "query_same": 39,
+   "query_n": 53
+  },
+  "ba:normal": {
+   "n": 62,
+   "first": 51.6,
+   "second": 50.0,
+   "diff_pp": -1.6,
+   "agreement": 91.9,
+   "both_success": 29,
+   "query_diff_median": 0.0,
+   "query_same": 15,
+   "query_n": 29
+  }
+ },
+ "agreement": 95.2,
+ "E14_H1": {
+  "supported": true
+ }
+}

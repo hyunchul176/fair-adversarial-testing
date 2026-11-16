@@ -1,0 +1,355 @@
+{
+ "by_seed": {
+  "s1": {
+   "ladder:following:0": {
+    "n": 62,
+    "robust": 51,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 11,
+    "error": 0,
+    "robust_rate": 0.8226
+   },
+   "ladder:following_aeb:0": {
+    "n": 62,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 62,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "ladder:rss_sut:0": {
+    "n": 62,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 62,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "ladder:rss_lat_sut:0": {
+    "n": 62,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 62,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "ba:cautious": {
+    "n": 62,
+    "robust": 4,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 58,
+    "error": 0,
+    "robust_rate": 0.0645
+   },
+   "ba:normal": {
+    "n": 62,
+    "robust": 6,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 56,
+    "error": 0,
+    "robust_rate": 0.0968
+   },
+   "ba:aggressive": {
+    "n": 62,
+    "robust": 7,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 55,
+    "error": 0,
+    "robust_rate": 0.1129
+   },
+   "tm:default": {
+    "n": 62,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 62,
+    "error": 0,
+    "robust_rate": 0.0
+   }
+  },
+  "s2": {
+   "ladder:following:0": {
+    "n": 62,
+    "robust": 56,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 6,
+    "error": 0,
+    "robust_rate": 0.9032
+   },
+   "ladder:following_aeb:0": {
+    "n": 62,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 62,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "ladder:rss_sut:0": {
+    "n": 62,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 62,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "ladder:rss_lat_sut:0": {
+    "n": 62,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 62,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "ba:cautious": {
+    "n": 62,
+    "robust": 2,
+    "fair": 1,
+    "attacker": 0,
+    "other": 0,
+    "none": 59,
+    "error": 0,
+    "robust_rate": 0.0323
+   },
+   "ba:normal": {
+    "n": 62,
+    "robust": 2,
+    "fair": 1,
+    "attacker": 0,
+    "other": 0,
+    "none": 59,
+    "error": 0,
+    "robust_rate": 0.0323
+   },
+   "ba:aggressive": {
+    "n": 62,
+    "robust": 2,
+    "fair": 1,
+    "attacker": 0,
+    "other": 0,
+    "none": 59,
+    "error": 0,
+    "robust_rate": 0.0323
+   },
+   "tm:default": {
+    "n": 62,
+    "robust": 0,
+    "fair": 1,
+    "attacker": 0,
+    "other": 0,
+    "none": 61,
+    "error": 0,
+    "robust_rate": 0.0
+   }
+  },
+  "s3": {
+   "ladder:following:0": {
+    "n": 62,
+    "robust": 54,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 8,
+    "error": 0,
+    "robust_rate": 0.871
+   },
+   "ladder:following_aeb:0": {
+    "n": 62,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 62,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "ladder:rss_sut:0": {
+    "n": 62,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 62,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "ladder:rss_lat_sut:0": {
+    "n": 62,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 62,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "ba:cautious": {
+    "n": 62,
+    "robust": 1,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 61,
+    "error": 0,
+    "robust_rate": 0.0161
+   },
+   "ba:normal": {
+    "n": 62,
+    "robust": 3,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 59,
+    "error": 0,
+    "robust_rate": 0.0484
+   },
+   "ba:aggressive": {
+    "n": 62,
+    "robust": 4,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 58,
+    "error": 0,
+    "robust_rate": 0.0645
+   },
+   "tm:default": {
+    "n": 62,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 62,
+    "error": 0,
+    "robust_rate": 0.0
+   }
+  }
+ },
+ "pooled": {
+  "ladder:following:0": {
+   "n": 186,
+   "robust": 161,
+   "fair": 0,
+   "attacker": 0,
+   "other": 0,
+   "none": 25,
+   "error": 0,
+   "robust_rate": 0.8656
+  },
+  "ladder:following_aeb:0": {
+   "n": 186,
+   "robust": 0,
+   "fair": 0,
+   "attacker": 0,
+   "other": 0,
+   "none": 186,
+   "error": 0,
+   "robust_rate": 0.0
+  },
+  "ladder:rss_sut:0": {
+   "n": 186,
+   "robust": 0,
+   "fair": 0,
+   "attacker": 0,
+   "other": 0,
+   "none": 186,
+   "error": 0,
+   "robust_rate": 0.0
+  },
+  "ladder:rss_lat_sut:0": {
+   "n": 186,
+   "robust": 0,
+   "fair": 0,
+   "attacker": 0,
+   "other": 0,
+   "none": 186,
+   "error": 0,
+   "robust_rate": 0.0
+  },
+  "ba:cautious": {
+   "n": 186,
+   "robust": 7,
+   "fair": 1,
+   "attacker": 0,
+   "other": 0,
+   "none": 178,
+   "error": 0,
+   "robust_rate": 0.0376
+  },
+  "ba:normal": {
+   "n": 186,
+   "robust": 11,
+   "fair": 1,
+   "attacker": 0,
+   "other": 0,
+   "none": 174,
+   "error": 0,
+   "robust_rate": 0.0591
+  },
+  "ba:aggressive": {
+   "n": 186,
+   "robust": 13,
+   "fair": 1,
+   "attacker": 0,
+   "other": 0,
+   "none": 172,
+   "error": 0,
+   "robust_rate": 0.0699
+  },
+  "tm:default": {
+   "n": 186,
+   "robust": 0,
+   "fair": 1,
+   "attacker": 0,
+   "other": 0,
+   "none": 185,
+   "error": 0,
+   "robust_rate": 0.0
+  }
+ },
+ "E2_H1": {
+  "statement": "attacker-caused collisions = 0 (all SUTs, all seeds)",
+  "attacker_collisions": 0,
+  "supported": true
+ },
+ "E2_H2": {
+  "statement": "competent SUTs: robust fair failure <= 3% each (seeds pooled)",
+  "rates": {
+   "ladder:following_aeb:0": 0.0,
+   "ladder:rss_sut:0": 0.0,
+   "ladder:rss_lat_sut:0": 0.0,
+   "tm:default": 0.0
+  },
+  "supported": true
+ },
+ "E3": {
+  "statement": "verdict agreement of repeated s1 runs >= 95%",
+  "pairs": 496,
+  "agreement": 1.0,
+  "agreement_robust_binary": 1.0,
+  "differing": [],
+  "supported": true
+ }
+}

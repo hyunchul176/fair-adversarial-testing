@@ -1,0 +1,211 @@
+{
+ "rows": 363,
+ "plans": {
+  "agent|acc_prod": 60,
+  "agent|acc_prod_aeb": 58,
+  "agent|idm_d10": 47,
+  "collide|acc_prod": 60,
+  "collide|acc_prod_aeb": 59,
+  "collide|idm_d10": 60,
+  "collide|idm_d5": 19
+ },
+ "errors": {
+  "ba:normal": 0,
+  "dec:acc_prod": 0,
+  "dec:acc_prod_aeb": 0,
+  "dec:cc_dec": 0,
+  "dec:cc_dec_aeb": 0,
+  "dec:idm_d0": 0,
+  "dec:idm_d10": 0,
+  "dec:idm_d5": 0,
+  "dec:rss_dec": 0,
+  "tm:default": 0
+ },
+ "beyond": {
+  "ba:normal": 0,
+  "dec:acc_prod": 0,
+  "dec:acc_prod_aeb": 0,
+  "dec:cc_dec": 0,
+  "dec:cc_dec_aeb": 0,
+  "dec:idm_d0": 0,
+  "dec:idm_d10": 0,
+  "dec:idm_d5": 0,
+  "dec:rss_dec": 0,
+  "tm:default": 0
+ },
+ "K1": {
+  "n": 165,
+  "cc_avoids": 1.0,
+  "cc_keeps_margin": 1.0,
+  "cc_aeb_avoids": 1.0,
+  "flips": [],
+  "supported": true
+ },
+ "K2": {
+  "n": 165,
+  "sut_collides": 0.9152,
+  "supported": true
+ },
+ "fair_failure_transfer": {
+  "n": 165,
+  "fair": 0.9152,
+  "robust": 0.9152,
+  "per_sut": {
+   "acc_prod": {
+    "plans": 60,
+    "fair_in_carla": 60,
+    "robust_in_carla": 60,
+    "of_60_cases": 1.0,
+    "robust_of_60": 1.0
+   },
+   "acc_prod_aeb": {
+    "plans": 58,
+    "fair_in_carla": 51,
+    "robust_in_carla": 51,
+    "of_60_cases": 0.85,
+    "robust_of_60": 0.85
+   },
+   "idm_d10": {
+    "plans": 47,
+    "fair_in_carla": 40,
+    "robust_in_carla": 40,
+    "of_60_cases": 0.6667,
+    "robust_of_60": 0.6667
+   }
+  }
+ },
+ "K3": {
+  "per_follower": {
+   "dec:acc_prod": {
+    "n": 363,
+    "agree": 0.9945,
+    "kappa": 0.4979,
+    "oned_contact": 362,
+    "carla_contact": 360,
+    "lost": 2,
+    "gained": 0
+   },
+   "dec:acc_prod_aeb": {
+    "n": 363,
+    "agree": 0.9614,
+    "kappa": 0.9134,
+    "oned_contact": 249,
+    "carla_contact": 235,
+    "lost": 14,
+    "gained": 0
+   },
+   "dec:cc_dec": {
+    "n": 363,
+    "agree": 1.0,
+    "kappa": 1.0,
+    "oned_contact": 1,
+    "carla_contact": 1,
+    "lost": 0,
+    "gained": 0
+   },
+   "dec:cc_dec_aeb": {
+    "n": 363,
+    "agree": 0.9972,
+    "kappa": 0.0,
+    "oned_contact": 1,
+    "carla_contact": 0,
+    "lost": 1,
+    "gained": 0
+   },
+   "dec:idm_d0": {
+    "n": 363,
+    "agree": 1.0,
+    "kappa": null,
+    "oned_contact": 0,
+    "carla_contact": 0,
+    "lost": 0,
+    "gained": 0
+   },
+   "dec:idm_d10": {
+    "n": 363,
+    "agree": 0.9532,
+    "kappa": 0.9058,
+    "oned_contact": 206,
+    "carla_contact": 189,
+    "lost": 17,
+    "gained": 0
+   },
+   "dec:idm_d5": {
+    "n": 363,
+    "agree": 0.9532,
+    "kappa": 0.1823,
+    "oned_contact": 19,
+    "carla_contact": 2,
+    "lost": 17,
+    "gained": 0
+   },
+   "dec:rss_dec": {
+    "n": 363,
+    "agree": 1.0,
+    "kappa": null,
+    "oned_contact": 0,
+    "carla_contact": 0,
+    "lost": 0,
+    "gained": 0
+   }
+  },
+  "supported": true
+ },
+ "K4": {
+  "plans": 27,
+  "sut_collisions": 27,
+  "cc_also": 0,
+  "attacker_share": 0.0,
+  "full_box": {
+   "plans": 198,
+   "sut_collisions": 173,
+   "cc_also": 0,
+   "attacker_share": 0.0
+  },
+  "supported": true
+ },
+ "K5": {
+  "per_sut": {
+   "idm_d0": {
+    "n": 363,
+    "contact": 0.0,
+    "fair": 0.0
+   },
+   "rss_dec": {
+    "n": 363,
+    "contact": 0.0,
+    "fair": 0.0
+   }
+  },
+  "supported": true
+ },
+ "third_party": {
+  "ba:normal": {
+   "n": 363,
+   "contact": 0.9614,
+   "fair_of_contacts": 0.9971,
+   "robust_of_contacts": 0.9971,
+   "by_method": {
+    "agent": 0.9394,
+    "collide": 0.9798
+   },
+   "v0_error_abs_max": 10.189
+  },
+  "tm:default": {
+   "n": 363,
+   "contact": 0.0,
+   "fair_of_contacts": null,
+   "robust_of_contacts": null,
+   "by_method": {
+    "agent": 0.0,
+    "collide": 0.0
+   },
+   "v0_error_abs_max": 9.719
+  }
+ },
+ "actuation": {
+  "cc_emergency_episodes": 315,
+  "cc_min_acc_median": -20.0,
+  "shim_v0_error_abs_max": 0.015
+ }
+}

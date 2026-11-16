@@ -1,0 +1,13 @@
+Reading,Data,reported failures also avoided,following H0,longitudinal RSS,weak ladder (4),competent (8)
+C (ours),development,100% (by contract),91.9,1.6,74.3,2.2
+C and \(C_\mathrm{CARS}\),development,81.6%,88.7,0.0,66.3,1.6
+C and \(\mathrm{FSM}_\mathrm{CARS}\),development,99.3%,91.9,1.6,74.3,2.2
+C (ours),MiTra,100% (by contract),68.0,12.2,59.2,8.6
+C and \(C_\mathrm{CARS}\),MiTra,82.7%,63.2,5.8,50.1,5.1
+C and \(\mathrm{FSM}_\mathrm{CARS}\),MiTra,98.1%,68.0,12.2,58.9,8.6
+C (ours),HIGH-SIM,100% (by contract),51.7,0.0,45.1,3.3
+C and \(C_\mathrm{CARS}\),HIGH-SIM,76.6%,45.0,0.0,34.6,2.5
+C and \(\mathrm{FSM}_\mathrm{CARS}\),HIGH-SIM,99.6%,51.7,0.0,45.1,3.3
+C (ours),exiD,100% (by contract),80.8,3.3,67.2,4.4
+C and \(C_\mathrm{CARS}\),exiD,83.5%,78.9,0.8,58.5,3.9
+C and \(\mathrm{FSM}_\mathrm{CARS}\),exiD,98.9%,80.8,3.3,67.2,4.4

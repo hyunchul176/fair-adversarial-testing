@@ -1,0 +1,248 @@
+--- carla_final_20261028/code/fairtest/carla_replay.py	2026-10-27 14:17:19.377900110 +0900
++++ carla_final_v2_20261029/code/fairtest/carla_replay.py	2026-10-29 10:08:04.136782757 +0900
+@@ -11,9 +11,16 @@
+     ba:<behavior>       CARLA's BehaviorAgent (cautious / normal / aggressive), cruise set to the case's SUT speed
+     tm:<d>              CARLA's Traffic Manager autopilot, no lane changes, desired speed = cruise, leading-vehicle
+                         distance d m ('default' keeps the Traffic Manager's own)
+-  Shim-driven vehicles track the controller's acceleration request: non-negative requests with CARLA's
+-  constant-velocity mode (the throttle map is unreliable after a velocity reset), braking with the calibrated brake
+-  plus a PI correction; lateral control is a Stanley lane keeper (the controllers' own steering is ignored).
++  Shim-driven vehicles track the controller's acceleration request (`actuate`, FAIRTEST_CARLA_ACT): 'h2' (default,
++  harness v2, 2026-10-29) tracks every request above CV_FLOOR (-1 m/s^2, i.e. cruising and the CC's 0.4 m/s^2
++  reaction deceleration) exactly in CARLA's constant-velocity mode, and stronger braking with the calibrated brake map
++  minus the disturbance seen over the previous braking tick (measured minus brake-map acceleration: the residual drive
++  force that builds up in constant-velocity mode, which made coasting and the braking plateau depend on how long the
++  vehicle had cruised). h2.1 (same day): CARLA's constant-velocity mode runs ~0.5% slower than commanded (31.84 m/s
++  for 32), so cruising targets fell behind their highway-env twins by ~0.5-1 m before a cut-in; the commanded speed now
++  gets an integral correction from the measured speed, in the pre-roll too (v0 error -0.08 -> 0.000 m/s). 'v1' is the earlier actuation (constant-velocity mode above -0.3 m/s^2, brake map plus a PI
++  whose measured acceleration was always 0 in the harness loops). Lateral control is a Stanley lane keeper (the
++  controllers' own steering is ignored).
+ - 3 s pre-roll at the case's SUT speed before t = 0; contact = oriented bounding boxes overlap (as in highway-env).
+ - Vehicle model: FAIRTEST_CARLA_BP (default vehicle.tesla.model3) with FAIRTEST_CARLA_BRAKE = 'scale,a0,k' from
+   `carla_calib` (default 2.5,0.56,9.97, the Tesla calibration).
+@@ -39,6 +46,9 @@
+ # PI correction of the brake map (kp, ki). E7 ran with 0.5,0.5, which overshoots the requested deceleration at
+ # braking onset (achieved ~9.9 vs requested 7.6 m/s^2 over 0.3 s); 0,0 = calibrated feed-forward only
+ BRAKE_KP, BRAKE_KI = (float(x) for x in os.environ.get('FAIRTEST_CARLA_PI', '.5,.5').split(','))
++ACT = os.environ.get('FAIRTEST_CARLA_ACT', 'h2')  # 'h2' (harness v2) or 'v1' (the earlier actuation, see the docstring)
++CV_GAIN = 1.  # h2.1: integral gain of the constant-velocity speed feedback (deadbeat)
++CV_FLOOR = -1.  # h2: requests above this are tracked exactly in constant-velocity mode (coasting reaches ~0.8 m/s^2)
+ LANE_HW, DT, PREROLL_S, HORIZON = 4., .1, 3., 120  # trajectories carry HORIZON + 1 states (t = 0 .. 12 s)
+ START_X = 250.  # road-frame x of the SUT at t = 0
+ BA_CV_S, BA_SETTLE_S = 1., 4.  # BehaviorAgent: constant-velocity lift, then own driving before t = 0
+@@ -176,6 +186,7 @@
+         from src.evaluation.predictive_recognition import controller
+         self.kind, self.cruise, self.prev_a, self.integ = kind, cruise, 0., 0.
+         self.v_cmd, self.braking = None, False
++        self._v_prev, self.b_prev, self.d_hat, self.req_prev = None, 0., 0., 0.  # h2 actuation state
+         # ':hw' suffix: the controller perceives highway-env geometry (lateral scaled by 4/w, 5 m x 2 m vehicles) while
+         # the vehicle is simulated in CARLA -- separates perception geometry from vehicle physics
+         self.hw = kind.endswith(':hw')
+@@ -213,21 +224,51 @@
+         # Stanley lane keeper towards the SUT lane centre (y = w)
+         steer = -heading + math.atan2(.8 * (self._w - y), max(vx, 1.))
+         ctl = carla.VehicleControl(steer=float(np.clip(steer / STEER_MAX_RAD, -1., 1.)))
+-        if self.prev_a > -.3:
+-            if self.braking:  # resume cruising from the speed actually reached after braking
+-                self.v_cmd, self.braking = vx, False
+-            self.v_cmd = max(0., self.v_cmd + self.prev_a * DT)
+-            vehicle.enable_constant_velocity(carla.Vector3D(self.v_cmd, 0., 0.))
+-            self.integ = 0.
++        actuate(self, self.prev_a, vx, vehicle, ctl, carla)
++        vehicle.apply_control(ctl)
++        return self.prev_a
++
++
++def actuate(tgt, req, vx, vehicle, ctl, carla):
++    """Longitudinal actuation of a shim-driven vehicle for the request `req` (m/s^2) at the measured speed `vx`; sets
++    the constant-velocity mode or ctl.brake. `tgt` keeps the state (v_cmd, braking, integ, _measured for 'v1';
++    _v_prev, b_prev, d_hat, req_prev for 'h2')."""
++    if ACT == 'v1':
++        if req > -.3:
++            if tgt.braking:  # resume cruising from the speed actually reached after braking
++                tgt.v_cmd, tgt.braking = vx, False
++            tgt.v_cmd = max(0., tgt.v_cmd + req * DT)
++            vehicle.enable_constant_velocity(carla.Vector3D(tgt.v_cmd, 0., 0.))
++            tgt.integ = 0.
+         else:
+-            self.braking = True
++            tgt.braking = True
+             vehicle.disable_constant_velocity()
+-            err = self.prev_a - self._measured
+-            self.integ = float(np.clip(self.integ + err * DT, -2., 2.))
+-            decel = -self.prev_a - BRAKE_KP * err - BRAKE_KI * self.integ
++            err = req - tgt._measured
++            tgt.integ = float(np.clip(tgt.integ + err * DT, -2., 2.))
++            decel = -req - BRAKE_KP * err - BRAKE_KI * tgt.integ
+             ctl.brake = float(np.clip((decel - BRAKE_A0) / BRAKE_K, 0., 1.))
+-        vehicle.apply_control(ctl)
+-        return self.prev_a
++        return
++    meas = 0. if tgt._v_prev is None else (vx - tgt._v_prev) / DT  # acceleration over the last tick
++    tgt._v_prev = vx
++    if req > CV_FLOOR:
++        if tgt.braking:  # resume cruising from the speed actually reached after braking
++            tgt.v_cmd, tgt.braking = vx, False
++        elif getattr(tgt, 'cv_goal', None) is not None:  # constant-velocity mode runs ~0.5% slow: feed the speed error back
++            tgt.cv_corr = getattr(tgt, 'cv_corr', 0.) + CV_GAIN * (tgt.cv_goal - vx)
++        tgt.v_cmd = max(0., tgt.v_cmd + req * DT)
++        tgt.cv_goal = tgt.v_cmd
++        vehicle.enable_constant_velocity(carla.Vector3D(tgt.v_cmd + getattr(tgt, 'cv_corr', 0.), 0., 0.))
++        tgt.d_hat = 0.
++    else:
++        if tgt.braking:  # disturbance over the last braking tick: measured minus what the brake map should have given
++            tgt.d_hat = meas + BRAKE_A0 + BRAKE_K * tgt.b_prev if tgt.b_prev > 0. else meas - tgt.req_prev
++        else:
++            tgt.d_hat = 0.
++        tgt.braking, tgt.cv_goal = True, None
++        vehicle.disable_constant_velocity()
++        tgt.b_prev = float(np.clip((-req - BRAKE_A0 + tgt.d_hat) / BRAKE_K, 0., 1.))
++        ctl.brake = tgt.b_prev
++    tgt.req_prev = req
+ 
+ 
+ def ba_plan(road, x_from):
+@@ -310,11 +351,15 @@
+     target = ShimTarget(kind, cruise, base)
+     target._w, target._measured = w, 0.
+     sut.set_target_velocity(road.velocity(sut0['vx'], 0., spawn_x(kind, sut0['vx'])))
+-    for _ in range(int(PREROLL_S / DT)):
++    corr = 0.
++    for i in range(int(PREROLL_S / DT)):
+         x, y, vx, vy, h = road.state(sut)
+-        sut.enable_constant_velocity(carla.Vector3D(sut0['vx'], 0., 0.))
++        if ACT != 'v1' and i > 0:  # h2.1: constant-velocity speed feedback (the mode runs ~0.5% slow)
++            corr += CV_GAIN * (sut0['vx'] - vx)
++        sut.enable_constant_velocity(carla.Vector3D(sut0['vx'] + corr, 0., 0.))
+         sut.apply_control(carla.VehicleControl(steer=float(np.clip((-h + math.atan2(.8 * (w - y), max(vx, 1.))) / STEER_MAX_RAD, -1, 1))))
+         world.tick()
++    target.cv_corr = corr
+     return target
+ 
+ 
+--- carla_final_20261028/code/fairtest/carla_dec.py	2026-10-27 14:17:19.377900110 +0900
++++ carla_final_v2_20261029/code/fairtest/carla_dec.py	2026-10-29 10:08:04.119782538 +0900
+@@ -61,6 +61,7 @@
+     def __init__(self, name, cruise):
+         self.ctrl, self.cruise = D.follower(name), float(cruise)
+         self.integ, self.v_cmd, self.braking, self._measured = 0., None, False, 0.
++        self._v_prev, self.b_prev, self.d_hat, self.req_prev = None, 0., 0., 0.  # h2 actuation state
+ 
+     def step(self, t, gap, v_l, a_l, sut_state, w, vehicle, carla):
+         return self.actuate(float(self.ctrl(t, gap, sut_state[2], v_l, a_l, self.cruise)), sut_state, w, vehicle, carla)
+@@ -69,19 +70,7 @@
+         x, y, vx, vy, heading = sut_state
+         steer = -heading + math.atan2(.8 * (w - y), max(vx, 1.))
+         ctl = carla.VehicleControl(steer=float(np.clip(steer / CR.STEER_MAX_RAD, -1., 1.)))
+-        if req > -.3:
+-            if self.braking:  # resume from the speed actually reached after braking
+-                self.v_cmd, self.braking = vx, False
+-            self.v_cmd = max(0., self.v_cmd + req * CR.DT)
+-            vehicle.enable_constant_velocity(carla.Vector3D(self.v_cmd, 0., 0.))
+-            self.integ = 0.
+-        else:
+-            self.braking = True
+-            vehicle.disable_constant_velocity()
+-            err = req - self._measured
+-            self.integ = float(np.clip(self.integ + err * CR.DT, -2., 2.))
+-            decel = -req - CR.BRAKE_KP * err - CR.BRAKE_KI * self.integ
+-            ctl.brake = float(np.clip((decel - CR.BRAKE_A0) / CR.BRAKE_K, 0., 1.))
++        CR.actuate(self, req, vx, vehicle, ctl, carla)  # same actuation as the ShimTarget (FAIRTEST_CARLA_ACT)
+         vehicle.apply_control(ctl)
+         return req
+ 
+@@ -131,16 +120,19 @@
+         else:
+             target = DecShim(kind.split(':', 1)[1], v0)
+             sut.set_target_velocity(road.velocity(v0, 0., x_spawn))
+-            for _ in range(int(CR.PREROLL_S / CR.DT)):
++            corr = 0.
++            for i in range(int(CR.PREROLL_S / CR.DT)):
+                 x, y, vx, vy, h = road.state(sut)
+-                sut.enable_constant_velocity(carla.Vector3D(v0, 0., 0.))
++                if CR.ACT != 'v1' and i > 0:  # h2.1: constant-velocity speed feedback (the mode runs ~0.5% slow)
++                    corr += CR.CV_GAIN * (v0 - vx)
++                sut.enable_constant_velocity(carla.Vector3D(v0 + corr, 0., 0.))
+                 sut.apply_control(carla.VehicleControl(steer=float(np.clip((-h + math.atan2(.8 * (w - y), max(vx, 1.))) / CR.STEER_MAX_RAD, -1, 1))))
+                 hold()
+                 world.tick()
+         xs0, _, vs0 = road.state(sut)[:3]
+         out['v0_error'] = round(vs0 - v0, 3)
+         if not agent:
+-            target.v_cmd = vs0
++            target.v_cmd, target.cv_corr = vs0, corr
+         x_lead0 = xs0 + gap0 + half  # the case's bumper gap at t = 0
+ 
+         def place(k):
+--- carla_final_20261028/code/fairtest/carla_cutout.py	2026-10-27 14:17:19.377900110 +0900
++++ carla_final_v2_20261029/code/fairtest/carla_cutout.py	2026-10-29 10:08:04.119782538 +0900
+@@ -128,16 +128,19 @@
+         else:
+             target = CutoutShim(kind.split(':', 1)[1], v0)
+             sut.set_target_velocity(road.velocity(v0, 0., x_spawn))
+-            for _ in range(int(CR.PREROLL_S / CR.DT)):
++            corr = 0.
++            for i in range(int(CR.PREROLL_S / CR.DT)):
+                 x, y, vx, vy, h = road.state(sut)
+-                sut.enable_constant_velocity(carla.Vector3D(v0, 0., 0.))
++                if CR.ACT != 'v1' and i > 0:  # h2.1: constant-velocity speed feedback (the mode runs ~0.5% slow)
++                    corr += CR.CV_GAIN * (v0 - vx)
++                sut.enable_constant_velocity(carla.Vector3D(v0 + corr, 0., 0.))
+                 sut.apply_control(carla.VehicleControl(steer=float(np.clip((-h + math.atan2(.8 * (w - y), max(vx, 1.))) / CR.STEER_MAX_RAD, -1, 1))))
+                 hold()
+                 world.tick()
+         xs0, _, vs0 = road.state(sut)[:3]
+         out['v0_error'] = round(vs0 - v0, 3)
+         if not agent:
+-            target.v_cmd = vs0
++            target.v_cmd, target.cv_corr = vs0, corr
+         x10, x20 = xs0 + float(case['gap']) + half1, xs0 + gap2_0(case) + half2
+ 
+         def place(k):
+--- carla_final_20261028/code/fairtest/env.py	2026-10-27 14:17:19.378900119 +0900
++++ carla_final_v2_20261029/code/fairtest/env.py	2026-10-29 09:14:50.929892383 +0900
+@@ -66,6 +66,11 @@
+ # clearance between lane-centred vehicles is 4 - width (highD median 3.84 - 1.92 = 1.92 m, p10-p90 1.41-2.24 m;
+ # CARLA Town04 with the Tesla box 3.5 - 2.16 = 1.34 m, i.e. width 2.66 here).
+ VEH_W = float(os.environ['FAIRTEST_VEH_W']) if os.environ.get('FAIRTEST_VEH_W') else None
++# Body length of both vehicles (unset = 5 m, the protocol default); harness v2 twin matching (e.g. 4.718 m Mustang)
++VEH_L = float(os.environ['FAIRTEST_VEH_L']) if os.environ.get('FAIRTEST_VEH_L') else None
++# Perception threshold of the twin's R157 CC models (unset = 1.095 m from the cutter's lane centre). Harness v2 twin
++# matching: the CARLA CC perceives at 1.095 m in CARLA metres, i.e. 1.095 * 4/w in twin units under the proportional map.
++CC_PERCEIVE = float(os.environ['FAIRTEST_CC_PERCEIVE']) if os.environ.get('FAIRTEST_CC_PERCEIVE') else None
+ if FLOOR_MARGIN is not None and FLOOR_REL is not None:
+     raise RuntimeError('Set at most one of FAIRTEST_FLOOR_MARGIN and FAIRTEST_FLOOR_REL')
+ 
+@@ -115,6 +120,7 @@
+                  fast_native_observation=True, vehicle_width=None, floor_rel=None):
+         super().__init__(base, case, b1_protocol, b2_protocol, initial_state, target_h=0.)
+         self.vehicle_width = VEH_W if vehicle_width is None else float(vehicle_width)
++        self.vehicle_length = VEH_L
+         if floor_rel is not None and FLOOR_MARGIN is not None:
+             raise RuntimeError('floor_rel and FAIRTEST_FLOOR_MARGIN are exclusive')
+         self.floor_rel = FLOOR_REL if floor_rel is None else float(floor_rel)  # relative deceleration headroom
+@@ -163,7 +169,8 @@
+         elif self.target_id in CC_REACTION:
+             self.target_control = CCDriver(CC_REACTION[self.target_id] if self.cc_reaction is None else self.cc_reaction,
+                                            CC_UNLATCH.get(self.target_id, WANDER_M),
+-                                           CC_EMERGENCY.get(self.target_id, -7.59), aeb=self.target_id == 'cc_r157_aeb')
++                                           CC_EMERGENCY.get(self.target_id, -7.59), aeb=self.target_id == 'cc_r157_aeb',
++                                           **({} if CC_PERCEIVE is None else dict(perceive_m=CC_PERCEIVE)))
+         elif self.target_id == 'following_aeb':
+             self.target_control = FollowingAEB(self.base['idm_reference'], self.target_h,
+                                                *(() if self.aeb_ttc is None else (self.aeb_ttc,)))
+@@ -190,9 +197,12 @@
+         elif self.target_id == 'cc_r157_time':
+             self.target_control = CCTimeDriver()
+         self.sim.cc_clock = 0.
+-        if self.vehicle_width is not None:  # lateral-clearance geometry; highway-env caches the collision pre-check radius
++        if self.vehicle_width is not None or self.vehicle_length is not None:  # body geometry; highway-env caches the collision pre-check radius
+             for v in self.sim.inner.road.vehicles:
+-                v.WIDTH = self.vehicle_width
++                if self.vehicle_width is not None:
++                    v.WIDTH = self.vehicle_width
++                if self.vehicle_length is not None:
++                    v.LENGTH = self.vehicle_length
+                 v.diagonal = float(np.sqrt(v.LENGTH ** 2 + v.WIDTH ** 2))
+             self.initial = [asdict(VehicleState.from_vehicle(v)) for v in self.sim.inner.road.vehicles]
+             # reset quantities that depend on the body geometry (the parent computed them for 2 m wide bodies)

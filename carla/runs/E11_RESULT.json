@@ -1,0 +1,44 @@
+{
+ "trajectories": 514,
+ "agreement_transfer": 0.9903,
+ "agreement_sut": 0.9922,
+ "agreement_cc": 0.9981,
+ "by_sut": {
+  "following_H0": {
+   "n": 171,
+   "first": 0.9064,
+   "second": 0.9064,
+   "diff": 0.0
+  },
+  "following_H0.5": {
+   "n": 160,
+   "first": 0.4062,
+   "second": 0.4125,
+   "diff": 0.0063
+  },
+  "following_H1": {
+   "n": 51,
+   "first": 0.098,
+   "second": 0.1373,
+   "diff": 0.0393
+  },
+  "reference_idm_H0": {
+   "n": 171,
+   "first": 0.9006,
+   "second": 0.9064,
+   "diff": 0.0058
+  },
+  "following_aeb_H0": {
+   "n": 9,
+   "first": 0.0,
+   "second": 0.0,
+   "diff": 0.0
+  },
+  "rss_sut_H0": {
+   "n": 3,
+   "first": 0.0,
+   "second": 0.0,
+   "diff": 0.0
+  }
+ }
+}

@@ -1,0 +1,2905 @@
+{
+ "manifest": {
+  "source": "NGSIM US-101 vehicle-trajectory-data (txt)",
+  "periods": [
+   {
+    "period": 1,
+    "rows": 1180598,
+    "vehicles": 2169,
+    "centres": {
+     "1": 2.150092479895359,
+     "2": 5.727708635501714,
+     "5": 16.1279890152335,
+     "6": 19.508138014775785,
+     "4": 12.540860489048523,
+     "3": 9.147886523831183
+    },
+    "candidates": 1319,
+    "eligible": 41,
+    "file_sha256": "6676066e5b3e7249b7b003a906b28585202623f5d274938b579b4b836f0668c8"
+   },
+   {
+    "period": 2,
+    "rows": 1403095,
+    "vehicles": 2017,
+    "centres": {
+     "5": 16.13431807414164,
+     "4": 12.48595234834895,
+     "3": 9.12339785158535,
+     "2": 5.698378186858367,
+     "1": 2.1095207999999688,
+     "6": 19.52703890290916
+    },
+    "candidates": 970,
+    "eligible": 11,
+    "file_sha256": "3bae26348f6d8c10ab76df85f52746ee85dea77f65a5d27f19fdfdb2e4d8cc45"
+   },
+   {
+    "period": 3,
+    "rows": 1515240,
+    "vehicles": 1915,
+    "centres": {
+     "5": 16.079396133245922,
+     "6": 19.53535384491635,
+     "3": 9.114919449493165,
+     "4": 12.497158605818711,
+     "1": 2.106364540699544,
+     "2": 5.685013917489292
+    },
+    "candidates": 964,
+    "eligible": 4,
+    "file_sha256": "409531bfa3c9cde7bdfeb06009bdea14ec1594e1ff8587f043e444c40306c4dc"
+   }
+  ],
+  "candidates": 3253,
+  "extractor_eligible": 56,
+  "extractor_exclusions": {
+   "unobserved_10_90_crossing": 502,
+   "nonadjacent_or_ramp_lane": 930,
+   "50pct_crossing_far_from_flip": 486,
+   "unstable_lane_labels": 361,
+   "no_observed_destination_follower": 53,
+   "follower_changes_lane": 40,
+   "below_speed_population": 663,
+   "truncated_follower": 8,
+   "no_50pct_crossing": 61,
+   "non_car_pair": 92,
+   "nonpositive_longitudinal_gap": 1
+  },
+  "selection_reasons": {
+   "extractor_ineligible": 3197,
+   "initial_domain:duration": 5,
+   "participant_reuse": 4
+  },
+  "selected": 47,
+  "selected_per_period": {
+   "1": 34,
+   "2": 10,
+   "3": 3
+  },
+  "salt": "acarl-b13-ngsim-v1:",
+  "events_sha256": "21a250ced70a7621e2201947268d5737ac4383db912601b18829b97f696ecd6a"
+ },
+ "cases": [
+  {
+   "case_id": 0,
+   "event": {
+    "event_id": "ngsim-us101-1:1609:4862",
+    "partition": "ngsim_us101",
+    "recording": 1,
+    "vehicle": 1609,
+    "flip_frame": 4862,
+    "eligible": true,
+    "times": [
+     483.5366955150697,
+     486.0577488149727,
+     487.07801680681695
+    ],
+    "metrics": {
+     "duration_10_90": 3.541321291747238,
+     "p10": {
+      "generator_speed": 16.798065045342536,
+      "target_speed": 15.958713626182172,
+      "gap": 64.97364997981248,
+      "headway": 4.071358851456264
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 16.798065045342536,
+     "vy": 0.5928076206828771,
+     "heading": 0.03527559326073892,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1930.0263500201875,
+     "y": 4.0,
+     "vx": 15.958713626182172,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 1621,
+   "dev16": false
+  },
+  {
+   "case_id": 1,
+   "event": {
+    "event_id": "ngsim-us101-1:612:1836",
+    "partition": "ngsim_us101",
+    "recording": 1,
+    "vehicle": 612,
+    "flip_frame": 1836,
+    "eligible": true,
+    "times": [
+     182.1556047800705,
+     183.3683701189851,
+     185.3957566287
+    ],
+    "metrics": {
+     "duration_10_90": 3.240151848629523,
+     "p10": {
+      "generator_speed": 15.930833315285547,
+      "target_speed": 18.333405227110678,
+      "gap": 17.454137888897662,
+      "headway": 0.9520401514437268
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 15.930833315285547,
+     "vy": 0.6479086003090369,
+     "heading": 0.040647699693699295,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1977.5458621111025,
+     "y": 4.0,
+     "vx": 18.333405227110678,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 629,
+   "dev16": false
+  },
+  {
+   "case_id": 2,
+   "event": {
+    "event_id": "ngsim-us101-1:415:1373",
+    "partition": "ngsim_us101",
+    "recording": 1,
+    "vehicle": 415,
+    "flip_frame": 1373,
+    "eligible": true,
+    "times": [
+     135.16281985405809,
+     137.04831284388314,
+     141.75261881434255
+    ],
+    "metrics": {
+     "duration_10_90": 6.589798960284469,
+     "p10": {
+      "generator_speed": 16.731962065401557,
+      "target_speed": 17.503901864563563,
+      "gap": 45.63827691739482,
+      "headway": 2.607320200405657
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 16.731962065401557,
+     "vy": 0.3185715166253978,
+     "heading": 0.019037398520114733,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1949.3617230826053,
+     "y": 4.0,
+     "vx": 17.503901864563563,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 436,
+   "dev16": false
+  },
+  {
+   "case_id": 3,
+   "event": {
+    "event_id": "ngsim-us101-1:645:1822",
+    "partition": "ngsim_us101",
+    "recording": 1,
+    "vehicle": 645,
+    "flip_frame": 1822,
+    "eligible": true,
+    "times": [
+     180.90997033137745,
+     181.95135484907254,
+     184.4437254084091
+    ],
+    "metrics": {
+     "duration_10_90": 3.533755077031657,
+     "p10": {
+      "generator_speed": 15.78541472078839,
+      "target_speed": 16.685044924194166,
+      "gap": 15.580258715543664,
+      "headway": 0.933785841532347
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 15.78541472078839,
+     "vy": 0.5940768964661005,
+     "heading": 0.03761679181083711,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1979.4197412844564,
+     "y": 4.0,
+     "vx": 16.685044924194166,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 648,
+   "dev16": false
+  },
+  {
+   "case_id": 4,
+   "event": {
+    "event_id": "ngsim-us101-1:784:2180",
+    "partition": "ngsim_us101",
+    "recording": 1,
+    "vehicle": 784,
+    "flip_frame": 2180,
+    "eligible": true,
+    "times": [
+     216.3877890324078,
+     217.73373672322336,
+     220.68734158575356
+    ],
+    "metrics": {
+     "duration_10_90": 4.299552553345762,
+     "p10": {
+      "generator_speed": 15.842588832079011,
+      "target_speed": 15.53555668047377,
+      "gap": 14.53237071123931,
+      "headway": 0.9354264549467134
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 15.842588832079011,
+     "vy": 0.4882652841167561,
+     "heading": 0.03081003886777055,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1980.4676292887607,
+     "y": 4.0,
+     "vx": 15.53555668047377,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 791,
+   "dev16": false
+  },
+  {
+   "case_id": 5,
+   "event": {
+    "event_id": "ngsim-us101-1:1562:4745",
+    "partition": "ngsim_us101",
+    "recording": 1,
+    "vehicle": 1562,
+    "flip_frame": 4745,
+    "eligible": true,
+    "times": [
+     472.2176646452051,
+     474.5261252605731,
+     476.4416214548456
+    ],
+    "metrics": {
+     "duration_10_90": 4.22395680964047,
+     "p10": {
+      "generator_speed": 18.12249588876967,
+      "target_speed": 16.69593395412023,
+      "gap": 17.21191611819529,
+      "headway": 1.0309046601102376
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 18.12249588876967,
+     "vy": 0.4970037203607157,
+     "heading": 0.02741781146345308,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1977.7880838818046,
+     "y": 4.0,
+     "vx": 16.69593395412023,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 1539,
+   "dev16": false
+  },
+  {
+   "case_id": 6,
+   "event": {
+    "event_id": "ngsim-us101-1:821:2345",
+    "partition": "ngsim_us101",
+    "recording": 1,
+    "vehicle": 821,
+    "flip_frame": 2345,
+    "eligible": true,
+    "times": [
+     233.531631516926,
+     234.44161136137467,
+     236.58640075958255
+    ],
+    "metrics": {
+     "duration_10_90": 3.0547692426565334,
+     "p10": {
+      "generator_speed": 16.229338552607565,
+      "target_speed": 16.91378009390174,
+      "gap": 27.283422228942356,
+      "headway": 1.613088385770097
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 16.229338552607565,
+     "vy": 0.687227768212256,
+     "heading": 0.042319497851636564,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1967.7165777710577,
+     "y": 4.0,
+     "vx": 16.91378009390174,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 836,
+   "dev16": false
+  },
+  {
+   "case_id": 7,
+   "event": {
+    "event_id": "ngsim-us101-1:586:1751",
+    "partition": "ngsim_us101",
+    "recording": 1,
+    "vehicle": 586,
+    "flip_frame": 1751,
+    "eligible": true,
+    "times": [
+     172.879759227753,
+     174.98207914960065,
+     177.8494062534395
+    ],
+    "metrics": {
+     "duration_10_90": 4.969647025686498,
+     "p10": {
+      "generator_speed": 22.678065567451664,
+      "target_speed": 17.36115133965994,
+      "gap": 71.56006232050925,
+      "headway": 4.121850038657109
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 22.678065567451664,
+     "vy": 0.4224288441781831,
+     "heading": 0.01862504524557713,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1923.4399376794909,
+     "y": 4.0,
+     "vx": 17.36115133965994,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 595,
+   "dev16": false
+  },
+  {
+   "case_id": 8,
+   "event": {
+    "event_id": "ngsim-us101-1:971:2816",
+    "partition": "ngsim_us101",
+    "recording": 1,
+    "vehicle": 971,
+    "flip_frame": 2816,
+    "eligible": true,
+    "times": [
+     279.8495905890796,
+     281.740442572457,
+     283.73150582983754
+    ],
+    "metrics": {
+     "duration_10_90": 3.8819152407579622,
+     "p10": {
+      "generator_speed": 15.826127866927676,
+      "target_speed": 17.027538681376285,
+      "gap": 19.10331350364885,
+      "headway": 1.1219069215530795
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 15.826127866927676,
+     "vy": 0.5407954885239561,
+     "heading": 0.034157764414120405,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1975.896686496351,
+     "y": 4.0,
+     "vx": 17.027538681376285,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 1001,
+   "dev16": false
+  },
+  {
+   "case_id": 9,
+   "event": {
+    "event_id": "ngsim-us101-1:1601:4833",
+    "partition": "ngsim_us101",
+    "recording": 1,
+    "vehicle": 1601,
+    "flip_frame": 4833,
+    "eligible": true,
+    "times": [
+     482.6503126809009,
+     483.51900612427505,
+     486.6231256335275
+    ],
+    "metrics": {
+     "duration_10_90": 3.9728129526265548,
+     "p10": {
+      "generator_speed": 16.35225890458121,
+      "target_speed": 17.147354410240943,
+      "gap": 31.20567245733082,
+      "headway": 1.819853471897321
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 16.35225890458121,
+     "vy": 0.5284221215716595,
+     "heading": 0.032303689908433804,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1963.7943275426692,
+     "y": 4.0,
+     "vx": 17.147354410240943,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 1605,
+   "dev16": false
+  },
+  {
+   "case_id": 10,
+   "event": {
+    "event_id": "ngsim-us101-1:1933:5948",
+    "partition": "ngsim_us101",
+    "recording": 1,
+    "vehicle": 1933,
+    "flip_frame": 5948,
+    "eligible": true,
+    "times": [
+     593.4665920872961,
+     594.9568684763353,
+     598.5340015736886
+    ],
+    "metrics": {
+     "duration_10_90": 5.067409486392421,
+     "p10": {
+      "generator_speed": 16.866109134140995,
+      "target_speed": 15.657792330036898,
+      "gap": 12.608858510557695,
+      "headway": 0.8052769026939817
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 16.866109134140995,
+     "vy": 0.41427918045139817,
+     "heading": 0.02455788061928597,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1982.3911414894424,
+     "y": 4.0,
+     "vx": 15.657792330036898,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 1935,
+   "dev16": false
+  },
+  {
+   "case_id": 11,
+   "event": {
+    "event_id": "ngsim-us101-1:503:1578",
+    "partition": "ngsim_us101",
+    "recording": 1,
+    "vehicle": 503,
+    "flip_frame": 1578,
+    "eligible": true,
+    "times": [
+     156.81143328719781,
+     157.58862164494238,
+     159.0576330062298
+    ],
+    "metrics": {
+     "duration_10_90": 2.246199719031978,
+     "p10": {
+      "generator_speed": 20.565563520859335,
+      "target_speed": 16.41288099553164,
+      "gap": 4.096548958727908,
+      "headway": 0.24959353326470726
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 20.565563520859335,
+     "vy": 0.9346106809856679,
+     "heading": 0.04541417322717279,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1990.903451041272,
+     "y": 4.0,
+     "vx": 16.41288099553164,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 493,
+   "dev16": false
+  },
+  {
+   "case_id": 12,
+   "event": {
+    "event_id": "ngsim-us101-1:97:482",
+    "partition": "ngsim_us101",
+    "recording": 1,
+    "vehicle": 97,
+    "flip_frame": 482,
+    "eligible": true,
+    "times": [
+     44.42998377729224,
+     47.73457531230911,
+     48.977718470176626
+    ],
+    "metrics": {
+     "duration_10_90": 4.547734692884383,
+     "p10": {
+      "generator_speed": 18.28618437786151,
+      "target_speed": 15.148594854622866,
+      "gap": 12.94844446957785,
+      "headway": 0.8547620814894524
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 18.28618437786151,
+     "vy": 0.4616193315584128,
+     "heading": 0.02523879783568197,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1982.051555530422,
+     "y": 4.0,
+     "vx": 15.148594854622866,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 99,
+   "dev16": false
+  },
+  {
+   "case_id": 13,
+   "event": {
+    "event_id": "ngsim-us101-1:1713:5149",
+    "partition": "ngsim_us101",
+    "recording": 1,
+    "vehicle": 1713,
+    "flip_frame": 5149,
+    "eligible": true,
+    "times": [
+     513.5543483297753,
+     514.6267617893917,
+     515.7213548989179
+    ],
+    "metrics": {
+     "duration_10_90": 2.167006569142586,
+     "p10": {
+      "generator_speed": 18.058300668234477,
+      "target_speed": 16.14371131960924,
+      "gap": 8.551060322883757,
+      "headway": 0.5296836739453501
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 18.058300668234477,
+     "vy": 0.9687659829591223,
+     "heading": 0.05359519964027155,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1986.4489396771162,
+     "y": 4.0,
+     "vx": 16.14371131960924,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 1714,
+   "dev16": false
+  },
+  {
+   "case_id": 14,
+   "event": {
+    "event_id": "ngsim-us101-1:2397:7314",
+    "partition": "ngsim_us101",
+    "recording": 1,
+    "vehicle": 2397,
+    "flip_frame": 7314,
+    "eligible": true,
+    "times": [
+     728.710491508788,
+     730.9620385085834,
+     732.2180733696549
+    ],
+    "metrics": {
+     "duration_10_90": 3.507581860866935,
+     "p10": {
+      "generator_speed": 18.19240802467353,
+      "target_speed": 16.41673757430819,
+      "gap": 6.0321210176948625,
+      "headway": 0.36743725666511173
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 18.19240802467353,
+     "vy": 0.5985098373485782,
+     "heading": 0.03288701787140874,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1988.9678789823051,
+     "y": 4.0,
+     "vx": 16.41673757430819,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 2398,
+   "dev16": false
+  },
+  {
+   "case_id": 15,
+   "event": {
+    "event_id": "ngsim-us101-1:866:2433",
+    "partition": "ngsim_us101",
+    "recording": 1,
+    "vehicle": 866,
+    "flip_frame": 2433,
+    "eligible": true,
+    "times": [
+     241.273595698733,
+     243.03340043015007,
+     244.08690851306372
+    ],
+    "metrics": {
+     "duration_10_90": 2.8133128143307147,
+     "p10": {
+      "generator_speed": 16.166986614591288,
+      "target_speed": 16.315335750746492,
+      "gap": 12.188408514623859,
+      "headway": 0.7470522642518215
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 16.166986614591288,
+     "vy": 0.7462100333601616,
+     "heading": 0.04612367260281831,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1982.811591485376,
+     "y": 4.0,
+     "vx": 16.315335750746492,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 869,
+   "dev16": false
+  },
+  {
+   "case_id": 16,
+   "event": {
+    "event_id": "ngsim-us101-1:1102:3284",
+    "partition": "ngsim_us101",
+    "recording": 1,
+    "vehicle": 1102,
+    "flip_frame": 3284,
+    "eligible": true,
+    "times": [
+     326.491569996362,
+     328.4722104360064,
+     329.46324698725414
+    ],
+    "metrics": {
+     "duration_10_90": 2.971676990892149,
+     "p10": {
+      "generator_speed": 18.85819787571425,
+      "target_speed": 16.75400279773843,
+      "gap": 13.950534738856504,
+      "headway": 0.8326687602523047
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 18.85819787571425,
+     "vy": 0.7064436193665987,
+     "heading": 0.03744331500147637,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1981.0494652611435,
+     "y": 4.0,
+     "vx": 16.75400279773843,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 1096,
+   "dev16": false
+  },
+  {
+   "case_id": 17,
+   "event": {
+    "event_id": "ngsim-us101-1:1225:3731",
+    "partition": "ngsim_us101",
+    "recording": 1,
+    "vehicle": 1225,
+    "flip_frame": 3731,
+    "eligible": true,
+    "times": [
+     370.64859925378215,
+     372.90634574379413,
+     374.6838120510235
+    ],
+    "metrics": {
+     "duration_10_90": 4.035212797241343,
+     "p10": {
+      "generator_speed": 15.614064842438747,
+      "target_speed": 15.24726910786125,
+      "gap": 21.686441058208686,
+      "headway": 1.422316409895822
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 15.614064842438747,
+     "vy": 0.520250691727952,
+     "heading": 0.03330704087343835,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1973.3135589417914,
+     "y": 4.0,
+     "vx": 15.24726910786125,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 1230,
+   "dev16": false
+  },
+  {
+   "case_id": 18,
+   "event": {
+    "event_id": "ngsim-us101-1:525:1519",
+    "partition": "ngsim_us101",
+    "recording": 1,
+    "vehicle": 525,
+    "flip_frame": 1519,
+    "eligible": true,
+    "times": [
+     150.42737964099314,
+     151.44022436568565,
+     153.82454974942831
+    ],
+    "metrics": {
+     "duration_10_90": 3.3971701084351764,
+     "p10": {
+      "generator_speed": 17.92515168326683,
+      "target_speed": 15.185046835646121,
+      "gap": 4.7234960861902096,
+      "headway": 0.3110623323928145
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 17.92515168326683,
+     "vy": 0.6179620631365128,
+     "heading": 0.034460931388847114,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1990.2765039138098,
+     "y": 4.0,
+     "vx": 15.185046835646121,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 526,
+   "dev16": false
+  },
+  {
+   "case_id": 19,
+   "event": {
+    "event_id": "ngsim-us101-1:125:694",
+    "partition": "ngsim_us101",
+    "recording": 1,
+    "vehicle": 125,
+    "flip_frame": 694,
+    "eligible": true,
+    "times": [
+     66.30435046114926,
+     69.54816118496235,
+     71.09155879193386
+    ],
+    "metrics": {
+     "duration_10_90": 4.787208330784608,
+     "p10": {
+      "generator_speed": 16.596405560054496,
+      "target_speed": 15.724552905822856,
+      "gap": 11.16662840585218,
+      "headway": 0.7101396442068085
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 16.596405560054496,
+     "vy": 0.4385274473087785,
+     "heading": 0.026416890806463002,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1983.8333715941478,
+     "y": 4.0,
+     "vx": 15.724552905822856,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 135,
+   "dev16": false
+  },
+  {
+   "case_id": 20,
+   "event": {
+    "event_id": "ngsim-us101-1:1623:5119",
+    "partition": "ngsim_us101",
+    "recording": 1,
+    "vehicle": 1623,
+    "flip_frame": 5119,
+    "eligible": true,
+    "times": [
+     510.1477634408602,
+     511.95350801242654,
+     513.1931324818119
+    ],
+    "metrics": {
+     "duration_10_90": 3.045369040951641,
+     "p10": {
+      "generator_speed": 17.287396213314754,
+      "target_speed": 18.33042310327499,
+      "gap": 33.33864484217912,
+      "headway": 1.8187602465227715
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 17.287396213314754,
+     "vy": 0.6893490479493021,
+     "heading": 0.03985470189255841,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1961.661355157821,
+     "y": 4.0,
+     "vx": 18.33042310327499,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 1673,
+   "dev16": false
+  },
+  {
+   "case_id": 21,
+   "event": {
+    "event_id": "ngsim-us101-1:118:595",
+    "partition": "ngsim_us101",
+    "recording": 1,
+    "vehicle": 118,
+    "flip_frame": 595,
+    "eligible": true,
+    "times": [
+     57.7655924153937,
+     59.17962621248724,
+     61.68986289436198
+    ],
+    "metrics": {
+     "duration_10_90": 3.924270478968282,
+     "p10": {
+      "generator_speed": 17.584286874628532,
+      "target_speed": 17.36842994462407,
+      "gap": 7.970874324164299,
+      "headway": 0.4589288928002079
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 17.584286874628532,
+     "vy": 0.5349586019326118,
+     "heading": 0.030413155627604542,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1987.0291256758358,
+     "y": 4.0,
+     "vx": 17.36842994462407,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 117,
+   "dev16": false
+  },
+  {
+   "case_id": 22,
+   "event": {
+    "event_id": "ngsim-us101-1:923:2553",
+    "partition": "ngsim_us101",
+    "recording": 1,
+    "vehicle": 923,
+    "flip_frame": 2553,
+    "eligible": true,
+    "times": [
+     254.0044569552117,
+     255.16781115104322,
+     256.2551097034207
+    ],
+    "metrics": {
+     "duration_10_90": 2.2506527482090064,
+     "p10": {
+      "generator_speed": 20.185288618934248,
+      "target_speed": 16.831210261671277,
+      "gap": 5.487358147849761,
+      "headway": 0.3260227911444846
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 20.185288618934248,
+     "vy": 0.9327615069472013,
+     "heading": 0.04617711672956461,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1989.5126418521502,
+     "y": 4.0,
+     "vx": 16.831210261671277,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 915,
+   "dev16": false
+  },
+  {
+   "case_id": 23,
+   "event": {
+    "event_id": "ngsim-us101-1:79:522",
+    "partition": "ngsim_us101",
+    "recording": 1,
+    "vehicle": 79,
+    "flip_frame": 522,
+    "eligible": true,
+    "times": [
+     50.865961885413235,
+     51.99456335281214,
+     54.56946376693362
+    ],
+    "metrics": {
+     "duration_10_90": 3.7035018815203884,
+     "p10": {
+      "generator_speed": 15.986604942165151,
+      "target_speed": 18.314224668004584,
+      "gap": 13.713932395097231,
+      "headway": 0.7488131571879109
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 15.986604942165151,
+     "vy": 0.5668478959088483,
+     "heading": 0.035442829860852725,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1981.2860676049027,
+     "y": 4.0,
+     "vx": 18.314224668004584,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 96,
+   "dev16": false
+  },
+  {
+   "case_id": 24,
+   "event": {
+    "event_id": "ngsim-us101-1:2149:6427",
+    "partition": "ngsim_us101",
+    "recording": 1,
+    "vehicle": 2149,
+    "flip_frame": 6427,
+    "eligible": true,
+    "times": [
+     641.238214843458,
+     642.5531068997817,
+     644.2442044860031
+    ],
+    "metrics": {
+     "duration_10_90": 3.0059896425451598,
+     "p10": {
+      "generator_speed": 17.811919143258628,
+      "target_speed": 16.923823864273846,
+      "gap": 12.752424014666929,
+      "headway": 0.753519069740927
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 17.811919143258628,
+     "vy": 0.6983797346875769,
+     "heading": 0.039188488512596,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1982.247575985333,
+     "y": 4.0,
+     "vx": 16.923823864273846,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 2150,
+   "dev16": false
+  },
+  {
+   "case_id": 25,
+   "event": {
+    "event_id": "ngsim-us101-1:1098:3191",
+    "partition": "ngsim_us101",
+    "recording": 1,
+    "vehicle": 1098,
+    "flip_frame": 3191,
+    "eligible": true,
+    "times": [
+     317.0605458509729,
+     318.6844678101275,
+     323.62601065965606
+    ],
+    "metrics": {
+     "duration_10_90": 6.565464808683146,
+     "p10": {
+      "generator_speed": 18.64861168107515,
+      "target_speed": 15.755166607975285,
+      "gap": 3.7271048115578083,
+      "headway": 0.23656397322203773
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 18.64861168107515,
+     "vy": 0.3197522658651429,
+     "heading": 0.01714449000712794,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1991.2728951884421,
+     "y": 4.0,
+     "vx": 15.755166607975285,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 1090,
+   "dev16": false
+  },
+  {
+   "case_id": 26,
+   "event": {
+    "event_id": "ngsim-us101-1:529:1615",
+    "partition": "ngsim_us101",
+    "recording": 1,
+    "vehicle": 529,
+    "flip_frame": 1615,
+    "eligible": true,
+    "times": [
+     159.89178684244308,
+     161.64521404480865,
+     166.30871158891273
+    ],
+    "metrics": {
+     "duration_10_90": 6.416924746469647,
+     "p10": {
+      "generator_speed": 17.824830221049236,
+      "target_speed": 16.82183187436533,
+      "gap": 12.444235229175945,
+      "headway": 0.7397669482204032
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 17.824830221049236,
+     "vy": 0.3271539455389845,
+     "heading": 0.01835177185614596,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1982.555764770824,
+     "y": 4.0,
+     "vx": 16.82183187436533,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 544,
+   "dev16": false
+  },
+  {
+   "case_id": 27,
+   "event": {
+    "event_id": "ngsim-us101-1:396:1364",
+    "partition": "ngsim_us101",
+    "recording": 1,
+    "vehicle": 396,
+    "flip_frame": 1364,
+    "eligible": true,
+    "times": [
+     134.87583411593656,
+     136.33022943559786,
+     137.4458898574195
+    ],
+    "metrics": {
+     "duration_10_90": 2.570055741482946,
+     "p10": {
+      "generator_speed": 16.025883883114854,
+      "target_speed": 16.974361780882667,
+      "gap": 27.0017825776539,
+      "headway": 1.590739193980453
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 16.025883883114854,
+     "vy": 0.8168391895745282,
+     "heading": 0.0509259226916863,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1967.998217422346,
+     "y": 4.0,
+     "vx": 16.974361780882667,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 419,
+   "dev16": false
+  },
+  {
+   "case_id": 28,
+   "event": {
+    "event_id": "ngsim-us101-1:249:954",
+    "partition": "ngsim_us101",
+    "recording": 1,
+    "vehicle": 249,
+    "flip_frame": 954,
+    "eligible": true,
+    "times": [
+     94.07815546959752,
+     94.98316795518546,
+     98.36489599035274
+    ],
+    "metrics": {
+     "duration_10_90": 4.286740520755217,
+     "p10": {
+      "generator_speed": 18.212853873539995,
+      "target_speed": 18.336027754081673,
+      "gap": 38.30497265082823,
+      "headway": 2.0890551194929006
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 18.212853873539995,
+     "vy": 0.4897245911829635,
+     "heading": 0.026882476493965555,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1956.6950273491718,
+     "y": 4.0,
+     "vx": 18.336027754081673,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 254,
+   "dev16": false
+  },
+  {
+   "case_id": 29,
+   "event": {
+    "event_id": "ngsim-us101-1:675:1870",
+    "partition": "ngsim_us101",
+    "recording": 1,
+    "vehicle": 675,
+    "flip_frame": 1870,
+    "eligible": true,
+    "times": [
+     185.48650586919058,
+     187.00100406088796,
+     190.6595583681136
+    ],
+    "metrics": {
+     "duration_10_90": 5.1730524989230275,
+     "p10": {
+      "generator_speed": 15.327559839123316,
+      "target_speed": 16.743403772966637,
+      "gap": 11.223356895586562,
+      "headway": 0.670315131126888
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 15.327559839123316,
+     "vy": 0.4058188563660138,
+     "heading": 0.026470232317775684,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1983.7766431044133,
+     "y": 4.0,
+     "vx": 16.743403772966637,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 681,
+   "dev16": false
+  },
+  {
+   "case_id": 30,
+   "event": {
+    "event_id": "ngsim-us101-1:132:674",
+    "partition": "ngsim_us101",
+    "recording": 1,
+    "vehicle": 132,
+    "flip_frame": 674,
+    "eligible": true,
+    "times": [
+     65.32188042889288,
+     67.54939950514833,
+     68.94453484747807
+    ],
+    "metrics": {
+     "duration_10_90": 3.622654418585185,
+     "p10": {
+      "generator_speed": 15.545365143062714,
+      "target_speed": 16.254799598469702,
+      "gap": 18.94568388243141,
+      "headway": 1.1655439839575161
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 15.545365143062714,
+     "vy": 0.5794983474725629,
+     "heading": 0.03726063262093257,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1976.0543161175685,
+     "y": 4.0,
+     "vx": 16.254799598469702,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 140,
+   "dev16": false
+  },
+  {
+   "case_id": 31,
+   "event": {
+    "event_id": "ngsim-us101-1:1191:3566",
+    "partition": "ngsim_us101",
+    "recording": 1,
+    "vehicle": 1191,
+    "flip_frame": 3566,
+    "eligible": true,
+    "times": [
+     354.92778281740686,
+     356.2551637668321,
+     357.55468900157496
+    ],
+    "metrics": {
+     "duration_10_90": 2.6269061841680923,
+     "p10": {
+      "generator_speed": 19.694443346081748,
+      "target_speed": 16.612858262930953,
+      "gap": 26.89959206807299,
+      "headway": 1.6192031282235946
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 19.694443346081748,
+     "vy": 0.7991614857380684,
+     "heading": 0.04055576884993718,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1968.100407931927,
+     "y": 4.0,
+     "vx": 16.612858262930953,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 1182,
+   "dev16": false
+  },
+  {
+   "case_id": 32,
+   "event": {
+    "event_id": "ngsim-us101-1:452:1389",
+    "partition": "ngsim_us101",
+    "recording": 1,
+    "vehicle": 452,
+    "flip_frame": 1389,
+    "eligible": true,
+    "times": [
+     136.79674343181114,
+     138.68947533181603,
+     140.50918484886782
+    ],
+    "metrics": {
+     "duration_10_90": 3.712441417056681,
+     "p10": {
+      "generator_speed": 19.195972372143366,
+      "target_speed": 15.33077117971431,
+      "gap": 12.281393146531343,
+      "headway": 0.8010942830313776
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 19.195972372143366,
+     "vy": 0.5654829297478018,
+     "heading": 0.029449898597195923,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1982.7186068534686,
+     "y": 4.0,
+     "vx": 15.33077117971431,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 447,
+   "dev16": false
+  },
+  {
+   "case_id": 33,
+   "event": {
+    "event_id": "ngsim-us101-1:1591:4607",
+    "partition": "ngsim_us101",
+    "recording": 1,
+    "vehicle": 1591,
+    "flip_frame": 4607,
+    "eligible": true,
+    "times": [
+     459.58365655757876,
+     460.48114511356016,
+     462.42256670575335
+    ],
+    "metrics": {
+     "duration_10_90": 2.838910148174591,
+     "p10": {
+      "generator_speed": 16.208056639152716,
+      "target_speed": 16.586231385419012,
+      "gap": 10.308492786974995,
+      "headway": 0.6215090424963691
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 16.208056639152716,
+     "vy": 0.7394817516095568,
+     "heading": 0.04559271424218769,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1984.691507213025,
+     "y": 4.0,
+     "vx": 16.586231385419012,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 1595,
+   "dev16": false
+  },
+  {
+   "case_id": 34,
+   "event": {
+    "event_id": "ngsim-us101-2:242:1552",
+    "partition": "ngsim_us101",
+    "recording": 2,
+    "vehicle": 242,
+    "flip_frame": 1552,
+    "eligible": true,
+    "times": [
+     153.7603696079752,
+     154.91710209210714,
+     159.88272745768228
+    ],
+    "metrics": {
+     "duration_10_90": 6.122357849707072,
+     "p10": {
+      "generator_speed": 18.301899173520795,
+      "target_speed": 16.650420883910122,
+      "gap": 8.952103397173403,
+      "headway": 0.5376502768061635
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 18.301899173520795,
+     "vy": 0.3428944045037708,
+     "heading": 0.018733263093739492,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1986.0478966028265,
+     "y": 4.0,
+     "vx": 16.650420883910122,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 246,
+   "dev16": false
+  },
+  {
+   "case_id": 35,
+   "event": {
+    "event_id": "ngsim-us101-2:930:4554",
+    "partition": "ngsim_us101",
+    "recording": 2,
+    "vehicle": 930,
+    "flip_frame": 4554,
+    "eligible": true,
+    "times": [
+     453.77951000406944,
+     455.5815743137878,
+     459.19088343192925
+    ],
+    "metrics": {
+     "duration_10_90": 5.4113734278598145,
+     "p10": {
+      "generator_speed": 15.316146115855384,
+      "target_speed": 17.31003915288665,
+      "gap": 23.88909586270711,
+      "headway": 1.380071740549664
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 15.316146115855384,
+     "vy": 0.3879462907191326,
+     "heading": 0.025323821983452455,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1971.110904137293,
+     "y": 4.0,
+     "vx": 17.31003915288665,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 946,
+   "dev16": false
+  },
+  {
+   "case_id": 36,
+   "event": {
+    "event_id": "ngsim-us101-2:296:1692",
+    "partition": "ngsim_us101",
+    "recording": 2,
+    "vehicle": 296,
+    "flip_frame": 1692,
+    "eligible": true,
+    "times": [
+     167.0731914002901,
+     168.80143052395454,
+     174.33764510323277
+    ],
+    "metrics": {
+     "duration_10_90": 7.26445370294266,
+     "p10": {
+      "generator_speed": 16.435132579424383,
+      "target_speed": 15.446543641457126,
+      "gap": 33.25498989365195,
+      "headway": 2.152908162859073
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 16.435132579424383,
+     "vy": 0.2889855637986799,
+     "heading": 0.017581591474982727,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1961.745010106348,
+     "y": 4.0,
+     "vx": 15.446543641457126,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 303,
+   "dev16": false
+  },
+  {
+   "case_id": 37,
+   "event": {
+    "event_id": "ngsim-us101-2:203:1478",
+    "partition": "ngsim_us101",
+    "recording": 2,
+    "vehicle": 203,
+    "flip_frame": 1478,
+    "eligible": true,
+    "times": [
+     146.7354555247422,
+     147.61424853476117,
+     148.80266897293617
+    ],
+    "metrics": {
+     "duration_10_90": 2.067213448193968,
+     "p10": {
+      "generator_speed": 15.142982918307283,
+      "target_speed": 15.151375705596747,
+      "gap": 21.42436189704796,
+      "headway": 1.4140208990483973
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 15.142982918307283,
+     "vy": 1.0155324071001846,
+     "heading": 0.06696263727942073,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1973.575638102952,
+     "y": 4.0,
+     "vx": 15.151375705596747,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 202,
+   "dev16": false
+  },
+  {
+   "case_id": 38,
+   "event": {
+    "event_id": "ngsim-us101-2:213:1505",
+    "partition": "ngsim_us101",
+    "recording": 2,
+    "vehicle": 213,
+    "flip_frame": 1505,
+    "eligible": true,
+    "times": [
+     147.81945515895663,
+     150.39281459451416,
+     151.7780023437907
+    ],
+    "metrics": {
+     "duration_10_90": 3.9585471848340603,
+     "p10": {
+      "generator_speed": 16.505425285942337,
+      "target_speed": 15.238456326764814,
+      "gap": 21.383240921136007,
+      "headway": 1.4032419336057353
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 16.505425285942337,
+     "vy": 0.5303264432661536,
+     "heading": 0.03211938197786584,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1973.616759078864,
+     "y": 4.0,
+     "vx": 15.238456326764814,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 216,
+   "dev16": false
+  },
+  {
+   "case_id": 39,
+   "event": {
+    "event_id": "ngsim-us101-2:227:1533",
+    "partition": "ngsim_us101",
+    "recording": 2,
+    "vehicle": 227,
+    "flip_frame": 1533,
+    "eligible": true,
+    "times": [
+     151.6381718232074,
+     153.05998278601828,
+     154.67350595499266
+    ],
+    "metrics": {
+     "duration_10_90": 3.0353341317852767,
+     "p10": {
+      "generator_speed": 18.851929461235837,
+      "target_speed": 15.234014332606943,
+      "gap": 5.0986122572787735,
+      "headway": 0.3346860614648159
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 18.851929461235837,
+     "vy": 0.6916280573696001,
+     "heading": 0.03667094166044778,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1989.9013877427212,
+     "y": 4.0,
+     "vx": 15.234014332606943,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 226,
+   "dev16": false
+  },
+  {
+   "case_id": 40,
+   "event": {
+    "event_id": "ngsim-us101-2:415:2316",
+    "partition": "ngsim_us101",
+    "recording": 2,
+    "vehicle": 415,
+    "flip_frame": 2316,
+    "eligible": true,
+    "times": [
+     230.45384336372138,
+     231.87848338896535,
+     234.35485264265697
+    ],
+    "metrics": {
+     "duration_10_90": 3.9010092789355895,
+     "p10": {
+      "generator_speed": 15.032978318433877,
+      "target_speed": 18.988564352736635,
+      "gap": 64.79244795832619,
+      "headway": 3.412182551283204
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 15.032978318433877,
+     "vy": 0.5381484890000322,
+     "heading": 0.035782582628605786,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1930.2075520416738,
+     "y": 4.0,
+     "vx": 18.988564352736635,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 434,
+   "dev16": false
+  },
+  {
+   "case_id": 41,
+   "event": {
+    "event_id": "ngsim-us101-2:184:1391",
+    "partition": "ngsim_us101",
+    "recording": 2,
+    "vehicle": 184,
+    "flip_frame": 1391,
+    "eligible": true,
+    "times": [
+     137.67176355744232,
+     139.08679271453497,
+     144.73034854176498
+    ],
+    "metrics": {
+     "duration_10_90": 7.058584984322664,
+     "p10": {
+      "generator_speed": 17.192545456913123,
+      "target_speed": 16.190824659578606,
+      "gap": 54.07404868562327,
+      "headway": 3.33979583020391
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 17.192545456913123,
+     "vy": 0.29741403605637,
+     "heading": 0.01729728587913625,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1940.9259513143768,
+     "y": 4.0,
+     "vx": 16.190824659578606,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 196,
+   "dev16": false
+  },
+  {
+   "case_id": 42,
+   "event": {
+    "event_id": "ngsim-us101-2:209:1529",
+    "partition": "ngsim_us101",
+    "recording": 2,
+    "vehicle": 209,
+    "flip_frame": 1529,
+    "eligible": true,
+    "times": [
+     151.45265564540063,
+     152.7485542978088,
+     155.3483216643623
+    ],
+    "metrics": {
+     "duration_10_90": 3.8956660189616628,
+     "p10": {
+      "generator_speed": 17.733026921522132,
+      "target_speed": 16.6537373641574,
+      "gap": 3.9210979063969376,
+      "headway": 0.23544852549650655
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 17.733026921522132,
+     "vy": 0.5388866085583586,
+     "heading": 0.030379518315703694,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1991.0789020936031,
+     "y": 4.0,
+     "vx": 16.6537373641574,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 208,
+   "dev16": false
+  },
+  {
+   "case_id": 43,
+   "event": {
+    "event_id": "ngsim-us101-2:44:951",
+    "partition": "ngsim_us101",
+    "recording": 2,
+    "vehicle": 44,
+    "flip_frame": 951,
+    "eligible": true,
+    "times": [
+     93.7989949484407,
+     95.28667501312442,
+     96.54105133858107
+    ],
+    "metrics": {
+     "duration_10_90": 2.7420563901403767,
+     "p10": {
+      "generator_speed": 15.675482785853374,
+      "target_speed": 16.51936055733354,
+      "gap": 9.030352403994641,
+      "headway": 0.5466526608371498
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 15.675482785853374,
+     "vy": 0.7656014138085687,
+     "heading": 0.048801911590912746,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1985.9696475960054,
+     "y": 4.0,
+     "vx": 16.51936055733354,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 54,
+   "dev16": false
+  },
+  {
+   "case_id": 44,
+   "event": {
+    "event_id": "ngsim-us101-3:350:2352",
+    "partition": "ngsim_us101",
+    "recording": 3,
+    "vehicle": 350,
+    "flip_frame": 2352,
+    "eligible": true,
+    "times": [
+     233.797319402527,
+     235.2078228981277,
+     236.36641425453934
+    ],
+    "metrics": {
+     "duration_10_90": 2.5690948520123413,
+     "p10": {
+      "generator_speed": 15.593738630656501,
+      "target_speed": 17.818144065765104,
+      "gap": 9.820713750242476,
+      "headway": 0.5511636741736479
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 15.593738630656501,
+     "vy": 0.8171447026916576,
+     "heading": 0.05235421713054457,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1985.1792862497575,
+     "y": 4.0,
+     "vx": 17.818144065765104,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 362,
+   "dev16": false
+  },
+  {
+   "case_id": 45,
+   "event": {
+    "event_id": "ngsim-us101-3:597:3207",
+    "partition": "ngsim_us101",
+    "recording": 3,
+    "vehicle": 597,
+    "flip_frame": 3207,
+    "eligible": true,
+    "times": [
+     318.1911683001261,
+     320.2993899239642,
+     323.4211020969982
+    ],
+    "metrics": {
+     "duration_10_90": 5.229933796872103,
+     "p10": {
+      "generator_speed": 15.941082386150597,
+      "target_speed": 15.10834734386604,
+      "gap": 12.80864343071886,
+      "headway": 0.8477858722197795
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 15.941082386150597,
+     "vy": 0.40140512873984113,
+     "heading": 0.02517522417823687,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1982.1913565692812,
+     "y": 4.0,
+     "vx": 15.10834734386604,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 599,
+   "dev16": false
+  },
+  {
+   "case_id": 46,
+   "event": {
+    "event_id": "ngsim-us101-3:631:3276",
+    "partition": "ngsim_us101",
+    "recording": 3,
+    "vehicle": 631,
+    "flip_frame": 3276,
+    "eligible": true,
+    "times": [
+     326.40286940943906,
+     327.7939708785824,
+     330.55006390880686
+    ],
+    "metrics": {
+     "duration_10_90": 4.147194499367799,
+     "p10": {
+      "generator_speed": 18.130478940651017,
+      "target_speed": 15.246889471924476,
+      "gap": 2.850817802704654,
+      "headway": 0.18697700983234197
+     }
+    }
+   },
+   "preflight": {
+    "finite_initial_metadata": true,
+    "duration": true,
+    "ordered_times": true,
+    "duration_consistency": true,
+    "positive_gap": true,
+    "generator_scalar_speed": true,
+    "target_speed": true,
+    "body_road": true,
+    "reset_no_overlap": true,
+    "reset_nonreverse": true
+   },
+   "physical_initial_state": [
+    {
+     "x": 2000.0,
+     "y": 0.4,
+     "vx": 18.130478940651017,
+     "vy": 0.5062029883947605,
+     "heading": 0.027912749501224965,
+     "length": 5.0,
+     "width": 2.0
+    },
+    {
+     "x": 1992.1491821972954,
+     "y": 4.0,
+     "vx": 15.246889471924476,
+     "vy": 0.0,
+     "heading": 0.0,
+     "length": 5.0,
+     "width": 2.0
+    }
+   ],
+   "initial_state_source": "local_preflight",
+   "follower": 637,
+   "dev16": false
+  }
+ ]
+}

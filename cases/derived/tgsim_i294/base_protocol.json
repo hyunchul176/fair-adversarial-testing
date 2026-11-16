@@ -1,0 +1,91 @@
+{
+  "version": "calibration-coverage-v1",
+  "seed": 235000,
+  "environment": {
+    "vehicles_count": 15,
+    "duration": 120,
+    "simulation_frequency": 10,
+    "policy_frequency": 10
+  },
+  "target_desired_speed_factor": 1.2,
+  "target_actuator": "viable_v1",
+  "arms": [
+    "continue",
+    "abort"
+  ],
+  "abort_release_s": 1.5,
+  "duration_10_90_min_s": 2.0,
+  "duration_10_90_max_s": 8.0,
+  "max_initial_scalar_speed_mps": 40.0,
+  "generator_bounds": {
+    "acceleration": 3.0,
+    "jerk": 2.0,
+    "speed_floor": 15.0,
+    "steering": 0.3,
+    "steering_slew": 0.15,
+    "tolerance": 1e-05
+  },
+  "lateral_bounds": {
+    "acceleration": 2.0,
+    "jerk": 4.0,
+    "path_tolerance_m": 1e-05,
+    "duration_tolerance_s": 0.05
+  },
+  "targets": [
+    "following",
+    "reference_idm"
+  ],
+  "windows_sha256": "9085600ede6ddb92891a1547c35f7c3b40e892095ff1773b61a06a94e7505b1f",
+  "modes": [
+    "observed"
+  ],
+  "cruise_mps": 25.0,
+  "idm_reference": {
+    "a": 1.5,
+    "b": 2.0,
+    "headway": 1.5,
+    "standstill": 2.0,
+    "delta": 4
+  },
+  "max_speed_tracking_error_mps": 0.5,
+  "qualification_initial_speed_range": [
+    15.0,
+    35.0
+  ],
+  "target_cruise_mode": "initial",
+  "partition": "calibration",
+  "recordings": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "registered_cases": 382,
+  "independent_initial_cruise": true,
+  "events_sha256": "7a1d704745c0697faf7a3df2dc9f339dfee74313cc7780c433c602438be8150d",
+  "prior_nominal_sha256": "f5856207555299a6c66a805b7ff18b4ada9f999324bcb5b4574c89618ea722cf",
+  "recognition_horizons": [
+    0.0,
+    0.5
+  ],
+  "abort_max_speed_deviation_mps": 0.5,
+  "abort_max_progress_loss_m": 1.0,
+  "selection_sha256": "09f719904f24f48bf15ff8640fc2d7ffa97ecc20a8acbcf05e5170df602451af",
+  "lateral_timing_mode": "observed_midpoint"
+}

@@ -1,0 +1,309 @@
+{
+ "E5A": {
+  "seeds": [
+   "s1",
+   "s2",
+   "s3"
+  ],
+  "runs": 1488,
+  "attacker": 99,
+  "attacker_by_seed": {
+   "s1": 24,
+   "s2": 48,
+   "s3": 27
+  },
+  "contact_rate": 19.7,
+  "attacker_share": 33.8,
+  "ba_attacker": 96,
+  "by_kind": {
+   "ladder:following:0": {
+    "n": 186,
+    "robust": 148,
+    "fair": 10,
+    "attacker": 3,
+    "other": 0,
+    "none": 25,
+    "error": 0,
+    "robust_rate": 79.6
+   },
+   "ladder:following_aeb:0": {
+    "n": 186,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 186,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "ladder:rss_sut:0": {
+    "n": 186,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 186,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "ladder:rss_lat_sut:0": {
+    "n": 186,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 186,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "ba:cautious": {
+    "n": 186,
+    "robust": 5,
+    "fair": 5,
+    "attacker": 30,
+    "other": 0,
+    "none": 146,
+    "error": 0,
+    "robust_rate": 2.7
+   },
+   "ba:normal": {
+    "n": 186,
+    "robust": 8,
+    "fair": 4,
+    "attacker": 32,
+    "other": 0,
+    "none": 142,
+    "error": 0,
+    "robust_rate": 4.3
+   },
+   "ba:aggressive": {
+    "n": 186,
+    "robust": 9,
+    "fair": 5,
+    "attacker": 34,
+    "other": 0,
+    "none": 138,
+    "error": 0,
+    "robust_rate": 4.8
+   },
+   "tm:default": {
+    "n": 186,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 186,
+    "error": 0,
+    "robust_rate": 0.0
+   }
+  }
+ },
+ "E5B": {
+  "seeds": [
+   "s1",
+   "s2",
+   "s3"
+  ],
+  "runs": 1488,
+  "attacker": 4,
+  "attacker_by_seed": {
+   "s1": 0,
+   "s2": 1,
+   "s3": 3
+  },
+  "contact_rate": 14.1,
+  "attacker_share": 1.9,
+  "ba_attacker": 3,
+  "by_kind": {
+   "ladder:following:0": {
+    "n": 186,
+    "robust": 149,
+    "fair": 11,
+    "attacker": 1,
+    "other": 0,
+    "none": 25,
+    "error": 0,
+    "robust_rate": 80.1
+   },
+   "ladder:following_aeb:0": {
+    "n": 186,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 186,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "ladder:rss_sut:0": {
+    "n": 186,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 186,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "ladder:rss_lat_sut:0": {
+    "n": 186,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 186,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "ba:cautious": {
+    "n": 186,
+    "robust": 6,
+    "fair": 5,
+    "attacker": 1,
+    "other": 0,
+    "none": 174,
+    "error": 0,
+    "robust_rate": 3.2
+   },
+   "ba:normal": {
+    "n": 186,
+    "robust": 9,
+    "fair": 6,
+    "attacker": 1,
+    "other": 0,
+    "none": 170,
+    "error": 0,
+    "robust_rate": 4.8
+   },
+   "ba:aggressive": {
+    "n": 186,
+    "robust": 11,
+    "fair": 8,
+    "attacker": 1,
+    "other": 0,
+    "none": 166,
+    "error": 0,
+    "robust_rate": 5.9
+   },
+   "tm:default": {
+    "n": 186,
+    "robust": 0,
+    "fair": 1,
+    "attacker": 0,
+    "other": 0,
+    "none": 185,
+    "error": 0,
+    "robust_rate": 0.0
+   }
+  }
+ },
+ "E2": {
+  "seeds": [
+   "s1",
+   "s2",
+   "s3"
+  ],
+  "runs": 1488,
+  "attacker": 0,
+  "attacker_by_seed": {
+   "s1": 0,
+   "s2": 0,
+   "s3": 0
+  },
+  "contact_rate": 13.2,
+  "attacker_share": 0.0,
+  "ba_attacker": 0,
+  "by_kind": {
+   "ladder:following:0": {
+    "n": 186,
+    "robust": 161,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 25,
+    "error": 0,
+    "robust_rate": 86.6
+   },
+   "ladder:following_aeb:0": {
+    "n": 186,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 186,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "ladder:rss_sut:0": {
+    "n": 186,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 186,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "ladder:rss_lat_sut:0": {
+    "n": 186,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 186,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "ba:cautious": {
+    "n": 186,
+    "robust": 7,
+    "fair": 1,
+    "attacker": 0,
+    "other": 0,
+    "none": 178,
+    "error": 0,
+    "robust_rate": 3.8
+   },
+   "ba:normal": {
+    "n": 186,
+    "robust": 11,
+    "fair": 1,
+    "attacker": 0,
+    "other": 0,
+    "none": 174,
+    "error": 0,
+    "robust_rate": 5.9
+   },
+   "ba:aggressive": {
+    "n": 186,
+    "robust": 13,
+    "fair": 1,
+    "attacker": 0,
+    "other": 0,
+    "none": 172,
+    "error": 0,
+    "robust_rate": 7.0
+   },
+   "tm:default": {
+    "n": 186,
+    "robust": 0,
+    "fair": 1,
+    "attacker": 0,
+    "other": 0,
+    "none": 185,
+    "error": 0,
+    "robust_rate": 0.0
+   }
+  }
+ },
+ "E5_H1": {
+  "A": 99,
+  "supported": true
+ },
+ "E5_H2": {
+  "A": 99,
+  "B": 4,
+  "E2": 0,
+  "supported": true
+ }
+}

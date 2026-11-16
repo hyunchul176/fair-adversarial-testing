@@ -1,0 +1,59 @@
+{
+ "spec": {
+  "source": "B61 known-capability SUTs: the R157 CC values with one factor changed",
+  "populations": {},
+  "brackets": {}
+ },
+ "drivers": [
+  {
+   "k": 0,
+   "pop": "brake_6.5",
+   "perceive_m": 1.095,
+   "reaction_s": 0.75,
+   "ttc_s": 2.0,
+   "decel_mps2": 6.5,
+   "buildup_s": 0.6,
+   "jerk_mps3": 10.8333
+  },
+  {
+   "k": 1,
+   "pop": "brake_5.5",
+   "perceive_m": 1.095,
+   "reaction_s": 0.75,
+   "ttc_s": 2.0,
+   "decel_mps2": 5.5,
+   "buildup_s": 0.6,
+   "jerk_mps3": 9.1667
+  },
+  {
+   "k": 2,
+   "pop": "perceive_1.5",
+   "perceive_m": 1.5,
+   "reaction_s": 0.75,
+   "ttc_s": 2.0,
+   "decel_mps2": 7.59,
+   "buildup_s": 0.6,
+   "jerk_mps3": 12.65
+  },
+  {
+   "k": 3,
+   "pop": "perceive_2.0",
+   "perceive_m": 2.0,
+   "reaction_s": 0.75,
+   "ttc_s": 2.0,
+   "decel_mps2": 7.59,
+   "buildup_s": 0.6,
+   "jerk_mps3": 12.65
+  },
+  {
+   "k": 4,
+   "pop": "brake_8.5",
+   "perceive_m": 1.095,
+   "reaction_s": 0.75,
+   "ttc_s": 2.0,
+   "decel_mps2": 8.5,
+   "buildup_s": 0.6,
+   "jerk_mps3": 14.1667
+  }
+ ]
+}

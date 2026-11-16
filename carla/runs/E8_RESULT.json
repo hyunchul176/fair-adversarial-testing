@@ -1,0 +1,299 @@
+{
+ "collide_commit": {
+  "seeds": [
+   "s1",
+   "s2",
+   "s3"
+  ],
+  "runs": 1488,
+  "attacker": 1259,
+  "attacker_by_seed": {
+   "s1": 427,
+   "s2": 418,
+   "s3": 414
+  },
+  "contact_rate": 85.0,
+  "attacker_share": 99.5,
+  "ba_attacker": 486,
+  "by_kind": {
+   "ladder:following:0": {
+    "n": 186,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 165,
+    "other": 0,
+    "none": 21,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "ladder:following_aeb:0": {
+    "n": 186,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 161,
+    "other": 0,
+    "none": 25,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "ladder:rss_sut:0": {
+    "n": 186,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 148,
+    "other": 0,
+    "none": 38,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "ladder:rss_lat_sut:0": {
+    "n": 186,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 147,
+    "other": 0,
+    "none": 39,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "ba:cautious": {
+    "n": 186,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 161,
+    "other": 0,
+    "none": 25,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "ba:normal": {
+    "n": 186,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 161,
+    "other": 0,
+    "none": 25,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "ba:aggressive": {
+    "n": 186,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 164,
+    "other": 0,
+    "none": 22,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "tm:default": {
+    "n": 186,
+    "robust": 0,
+    "fair": 6,
+    "attacker": 152,
+    "other": 0,
+    "none": 28,
+    "error": 0,
+    "robust_rate": 0.0
+   }
+  }
+ },
+ "cars": {
+  "seeds": [
+   "s1",
+   "s2",
+   "s3"
+  ],
+  "runs": 1488,
+  "attacker": 1188,
+  "attacker_by_seed": {
+   "s1": 400,
+   "s2": 394,
+   "s3": 394
+  },
+  "contact_rate": 81.3,
+  "attacker_share": 98.2,
+  "ba_attacker": 482,
+  "by_kind": {
+   "ladder:following:0": {
+    "n": 186,
+    "robust": 4,
+    "fair": 2,
+    "attacker": 162,
+    "other": 0,
+    "none": 18,
+    "error": 0,
+    "robust_rate": 2.2
+   },
+   "ladder:following_aeb:0": {
+    "n": 186,
+    "robust": 0,
+    "fair": 1,
+    "attacker": 159,
+    "other": 0,
+    "none": 26,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "ladder:rss_sut:0": {
+    "n": 186,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 136,
+    "other": 0,
+    "none": 50,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "ladder:rss_lat_sut:0": {
+    "n": 186,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 112,
+    "other": 0,
+    "none": 74,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "ba:cautious": {
+    "n": 186,
+    "robust": 2,
+    "fair": 1,
+    "attacker": 160,
+    "other": 0,
+    "none": 23,
+    "error": 0,
+    "robust_rate": 1.1
+   },
+   "ba:normal": {
+    "n": 186,
+    "robust": 2,
+    "fair": 0,
+    "attacker": 161,
+    "other": 0,
+    "none": 23,
+    "error": 0,
+    "robust_rate": 1.1
+   },
+   "ba:aggressive": {
+    "n": 186,
+    "robust": 2,
+    "fair": 0,
+    "attacker": 161,
+    "other": 0,
+    "none": 23,
+    "error": 0,
+    "robust_rate": 1.1
+   },
+   "tm:default": {
+    "n": 186,
+    "robust": 0,
+    "fair": 8,
+    "attacker": 137,
+    "other": 0,
+    "none": 41,
+    "error": 0,
+    "robust_rate": 0.0
+   }
+  }
+ },
+ "dynasto": {
+  "seeds": [
+   "s1",
+   "s2",
+   "s3"
+  ],
+  "runs": 1488,
+  "attacker": 1068,
+  "attacker_by_seed": {
+   "s1": 371,
+   "s2": 333,
+   "s3": 364
+  },
+  "contact_rate": 85.4,
+  "attacker_share": 84.0,
+  "ba_attacker": 388,
+  "by_kind": {
+   "ladder:following:0": {
+    "n": 186,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 159,
+    "other": 0,
+    "none": 27,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "ladder:following_aeb:0": {
+    "n": 186,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 159,
+    "other": 0,
+    "none": 27,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "ladder:rss_sut:0": {
+    "n": 186,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 159,
+    "other": 0,
+    "none": 27,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "ladder:rss_lat_sut:0": {
+    "n": 186,
+    "robust": 0,
+    "fair": 2,
+    "attacker": 156,
+    "other": 0,
+    "none": 28,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "ba:cautious": {
+    "n": 186,
+    "robust": 0,
+    "fair": 30,
+    "attacker": 129,
+    "other": 0,
+    "none": 27,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "ba:normal": {
+    "n": 186,
+    "robust": 0,
+    "fair": 29,
+    "attacker": 130,
+    "other": 0,
+    "none": 27,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "ba:aggressive": {
+    "n": 186,
+    "robust": 0,
+    "fair": 30,
+    "attacker": 129,
+    "other": 0,
+    "none": 27,
+    "error": 0,
+    "robust_rate": 0.0
+   },
+   "tm:default": {
+    "n": 186,
+    "robust": 0,
+    "fair": 112,
+    "attacker": 47,
+    "other": 0,
+    "none": 27,
+    "error": 0,
+    "robust_rate": 0.0
+   }
+  }
+ }
+}

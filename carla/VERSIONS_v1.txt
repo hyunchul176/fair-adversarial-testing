@@ -1,0 +1,9 @@
+package commit: 7b67a37 Regenerate MANIFEST.sha256 after adding LICENSE, NOTICE and the README license section
+code snapshot: 57574f7 (README)
+python: $HOME/fairtest/env/bin/python
+numpy 2.4.4 torch 2.5.1+cpu gym 1.2.3 highway-env 1.10.2 sb3 2.8.0 sklearn 1.7.2 scipy 1.17.1 carla 0.9.16
+data case_pool sha256: f75c9907f0b79f99
+policy s1 sha256: c1cad5d38599a6b5
+policy s2 sha256: 1bd9639c3c35df2a
+policy s3 sha256: 23514ef64ff8627d
+code tree sha256: 78e6b50eb99cef31

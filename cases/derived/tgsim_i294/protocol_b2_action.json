@@ -1,0 +1,366 @@
+{
+  "version": "adversarial-B2-causal-lateral-support-execution-v1",
+  "status": "registered_for_server_support_table",
+  "native_execution_in_this_stage": 0,
+  "ppo_training_transitions": 0,
+  "objective": "Retain adversarial risk discovery; test whether online target response can improve maneuver choice beyond a strong initial-information plan.",
+  "decision": "Direction 2: explicit causal lateral action-space extension. No risk-goal retargeting or penalty chosen to exclude maximum braking.",
+  "parent": {
+    "B1_protocol_sha256": "ade00c73dc59d67d23a68c51cbe4077d5414a1af56f7c0886923cd17a04d143d",
+    "B1_result_manifest_sha256": "a2940264289ffe35a6bd2625190d48d2b83d57c3e672ed87206bc5bf2227344a",
+    "result_commit": "2dc899c88ae3ecd294cd402cb87c2c779fe0ac02"
+  },
+  "data": {
+    "inputs": [
+      {
+        "input_id": 0,
+        "case_id": 0,
+        "event_id": "01:116:2383",
+        "scenario": "original",
+        "gap_delta_m": 0.0,
+        "speed_delta_mps": 0.0,
+        "initial_gap_m": 16.25100000000006,
+        "target_initial_and_cruise_mps": 25.87,
+        "eligibility": "initial_domain_pass",
+        "selection_role": "previously_evaluated_control",
+        "online_maneuver_validity": "not_yet_evaluated"
+      },
+      {
+        "input_id": 1,
+        "case_id": 0,
+        "event_id": "01:116:2383",
+        "scenario": "joint",
+        "gap_delta_m": -2.0,
+        "speed_delta_mps": 0.75,
+        "initial_gap_m": 14.251000000000062,
+        "target_initial_and_cruise_mps": 26.62,
+        "eligibility": "initial_domain_pass",
+        "selection_role": "previously_evaluated_control",
+        "online_maneuver_validity": "not_yet_evaluated"
+      },
+      {
+        "input_id": 2,
+        "case_id": 2,
+        "event_id": "01:143:3400",
+        "scenario": "original",
+        "gap_delta_m": 0.0,
+        "speed_delta_mps": 0.0,
+        "initial_gap_m": 12.265333333333297,
+        "target_initial_and_cruise_mps": 27.67266666666667,
+        "eligibility": "initial_domain_pass",
+        "selection_role": "previously_evaluated_control",
+        "online_maneuver_validity": "not_yet_evaluated"
+      },
+      {
+        "input_id": 3,
+        "case_id": 2,
+        "event_id": "01:143:3400",
+        "scenario": "joint",
+        "gap_delta_m": -2.0,
+        "speed_delta_mps": 0.75,
+        "initial_gap_m": 10.265333333333297,
+        "target_initial_and_cruise_mps": 28.42266666666667,
+        "eligibility": "initial_domain_pass",
+        "selection_role": "previously_evaluated_control",
+        "online_maneuver_validity": "not_yet_evaluated"
+      },
+      {
+        "input_id": 4,
+        "case_id": 31,
+        "event_id": "03:430:11240",
+        "scenario": "original",
+        "gap_delta_m": 0.0,
+        "speed_delta_mps": 0.0,
+        "initial_gap_m": 24.87999999999998,
+        "target_initial_and_cruise_mps": 33.94,
+        "eligibility": "initial_domain_pass",
+        "selection_role": "previously_selected_stress",
+        "online_maneuver_validity": "not_yet_evaluated"
+      },
+      {
+        "input_id": 5,
+        "case_id": 31,
+        "event_id": "03:430:11240",
+        "scenario": "joint",
+        "gap_delta_m": -2.0,
+        "speed_delta_mps": 0.75,
+        "initial_gap_m": 22.87999999999998,
+        "target_initial_and_cruise_mps": 34.69,
+        "eligibility": "initial_domain_pass",
+        "selection_role": "previously_selected_stress",
+        "online_maneuver_validity": "not_yet_evaluated"
+      },
+      {
+        "input_id": 6,
+        "case_id": 212,
+        "event_id": "09:1226:23146",
+        "scenario": "original",
+        "gap_delta_m": 0.0,
+        "speed_delta_mps": 0.0,
+        "initial_gap_m": 74.57999999999993,
+        "target_initial_and_cruise_mps": 32.74,
+        "eligibility": "initial_domain_pass",
+        "selection_role": "previously_evaluated_control",
+        "online_maneuver_validity": "not_yet_evaluated"
+      },
+      {
+        "input_id": 7,
+        "case_id": 212,
+        "event_id": "09:1226:23146",
+        "scenario": "joint",
+        "gap_delta_m": -2.0,
+        "speed_delta_mps": 0.75,
+        "initial_gap_m": 72.57999999999993,
+        "target_initial_and_cruise_mps": 33.49,
+        "eligibility": "initial_domain_pass",
+        "selection_role": "previously_evaluated_control",
+        "online_maneuver_validity": "not_yet_evaluated"
+      },
+      {
+        "input_id": 8,
+        "case_id": 327,
+        "event_id": "21:589:12979",
+        "scenario": "original",
+        "gap_delta_m": 0.0,
+        "speed_delta_mps": 0.0,
+        "initial_gap_m": 21.7990000000001,
+        "target_initial_and_cruise_mps": 27.788500000000006,
+        "eligibility": "initial_domain_pass",
+        "selection_role": "previously_selected_stress",
+        "online_maneuver_validity": "not_yet_evaluated"
+      },
+      {
+        "input_id": 9,
+        "case_id": 327,
+        "event_id": "21:589:12979",
+        "scenario": "joint",
+        "gap_delta_m": -2.0,
+        "speed_delta_mps": 0.75,
+        "initial_gap_m": 19.7990000000001,
+        "target_initial_and_cruise_mps": 28.538500000000006,
+        "eligibility": "initial_domain_pass",
+        "selection_role": "previously_selected_stress",
+        "online_maneuver_validity": "not_yet_evaluated"
+      },
+      {
+        "input_id": 10,
+        "case_id": 345,
+        "event_id": "22:653:12776",
+        "scenario": "original",
+        "gap_delta_m": 0.0,
+        "speed_delta_mps": 0.0,
+        "initial_gap_m": 49.94350000000015,
+        "target_initial_and_cruise_mps": 34.003249999999994,
+        "eligibility": "initial_domain_pass",
+        "selection_role": "previously_selected_stress",
+        "online_maneuver_validity": "not_yet_evaluated"
+      },
+      {
+        "input_id": 11,
+        "case_id": 345,
+        "event_id": "22:653:12776",
+        "scenario": "joint",
+        "gap_delta_m": -2.0,
+        "speed_delta_mps": 0.75,
+        "initial_gap_m": 47.94350000000015,
+        "target_initial_and_cruise_mps": 34.753249999999994,
+        "eligibility": "initial_domain_pass",
+        "selection_role": "previously_selected_stress",
+        "online_maneuver_validity": "not_yet_evaluated"
+      },
+      {
+        "input_id": 12,
+        "case_id": 380,
+        "event_id": "24:1165:21934",
+        "scenario": "original",
+        "gap_delta_m": 0.0,
+        "speed_delta_mps": 0.0,
+        "initial_gap_m": 19.99100000000032,
+        "target_initial_and_cruise_mps": 31.07825000000001,
+        "eligibility": "initial_domain_pass",
+        "selection_role": "previously_evaluated_control",
+        "online_maneuver_validity": "not_yet_evaluated"
+      },
+      {
+        "input_id": 13,
+        "case_id": 380,
+        "event_id": "24:1165:21934",
+        "scenario": "joint",
+        "gap_delta_m": -2.0,
+        "speed_delta_mps": 0.75,
+        "initial_gap_m": 17.99100000000032,
+        "target_initial_and_cruise_mps": 31.82825000000001,
+        "eligibility": "initial_domain_pass",
+        "selection_role": "previously_evaluated_control",
+        "online_maneuver_validity": "not_yet_evaluated"
+      },
+      {
+        "input_id": 14,
+        "case_id": 381,
+        "event_id": "24:1192:22483",
+        "scenario": "original",
+        "gap_delta_m": 0.0,
+        "speed_delta_mps": 0.0,
+        "initial_gap_m": 18.116500000000052,
+        "target_initial_and_cruise_mps": 29.094250000000006,
+        "eligibility": "initial_domain_pass",
+        "selection_role": "previously_selected_stress",
+        "online_maneuver_validity": "not_yet_evaluated"
+      },
+      {
+        "input_id": 15,
+        "case_id": 381,
+        "event_id": "24:1192:22483",
+        "scenario": "joint",
+        "gap_delta_m": -2.0,
+        "speed_delta_mps": 0.75,
+        "initial_gap_m": 16.116500000000052,
+        "target_initial_and_cruise_mps": 29.844250000000006,
+        "eligibility": "initial_domain_pass",
+        "selection_role": "previously_selected_stress",
+        "online_maneuver_validity": "not_yet_evaluated"
+      }
+    ],
+    "cases": 8,
+    "conditions": 32,
+    "target_h": [
+      0.0,
+      0.5
+    ],
+    "exposure": "All exposed same8 development inputs. No held-out or naturalness claim.",
+    "new_raw_data": false,
+    "new_target_law": false
+  },
+  "time": {
+    "physics_hz": 10,
+    "decision_hz": 2,
+    "horizon_s": 12,
+    "max_ticks": 120,
+    "max_requests": 24
+  },
+  "action": {
+    "count": 6,
+    "mapping": [
+      {
+        "id": 0,
+        "lane_goal_m": 0.0,
+        "longitudinal_request_mps2": 0.0
+      },
+      {
+        "id": 1,
+        "lane_goal_m": 0.0,
+        "longitudinal_request_mps2": -3.0
+      },
+      {
+        "id": 2,
+        "lane_goal_m": 0.0,
+        "longitudinal_request_mps2": 3.0
+      },
+      {
+        "id": 3,
+        "lane_goal_m": 4.0,
+        "longitudinal_request_mps2": 0.0
+      },
+      {
+        "id": 4,
+        "lane_goal_m": 4.0,
+        "longitudinal_request_mps2": -3.0
+      },
+      {
+        "id": 5,
+        "lane_goal_m": 4.0,
+        "longitudinal_request_mps2": 3.0
+      }
+    ],
+    "longitudinal": "Identical B1 scalar actuator, speed/acceleration/jerk and numerical projection.",
+    "lateral": "Current three realized lateral positions define a history-consistent quintic to lane goal with terminal derivative 1 and 2 zero. No observed future path/midpoint.",
+    "durations_s": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "duration_selection": "Shortest eligible duration with deadline <=12s, independent of target/outcome.",
+    "repeated_goal": "Continue same committed polynomial/deadline; do not replan every 0.5s.",
+    "changed_goal": "Fit causal history and certify full-polynomial extrema before switching.",
+    "infeasible_switch": "Record requested/applied goal mismatch and continue existing certified reference tail. No initial feasible reference is a hard integration failure.",
+    "center_corridor_m": [
+      0,
+      4
+    ],
+    "derivative_audit_interval": "[-0.2,T]; corridor interval [0,T]",
+    "reset_history": "Synthetic two preceding samples from declared initial lateral velocity and ay=0; explicitly not measured history.",
+    "reference_acceleration_limit": 1.996,
+    "reference_jerk_limit": 3.92,
+    "reserve_basis": "Native path tolerance eps=1e-5 and dt=.1: 4eps/dt^2=.004 acceleration; 8eps/dt^3=.08 jerk. Native physical limits remain 2 and 4.",
+    "physical_claim": "Reference-only certification. Actual steering/slew/quantization/body-road/path/finite-difference motion still audited."
+  },
+  "matched_nominal": {
+    "plan_id": 3,
+    "meaning": "B2 committed lane4 with longitudinal zero; recomputed for both H. B1 zero is historical, not this nominal."
+  },
+  "reward": "Unchanged B1 risk return and intended-contact treatment; no target severity goal, speed-deviation cost or new attack penalty.",
+  "information": {
+    "hidden": [
+      "H identity",
+      "target internal controller states",
+      "future target trajectories",
+      "case ID"
+    ],
+    "branch": "One common lane4/coast probe, with the same branch time chosen for both H. Legal completed target observations only.",
+    "analysis": "H-specific oracle is a finite-table upper bound. Even a legal temporal ordering is not a deployed policy or causal-effect proof."
+  },
+  "library": {
+    "file": "plan_library.json",
+    "sha256": "165aaba2f1b7d22c4ca5f52c6a32b0970dc1dae9f6b4db8e9d1e3cdccd81cc5d",
+    "unique_plans": 26,
+    "constants": 6,
+    "common_probe_action": 3,
+    "branch_times_s": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "changed_suffixes_per_time": 5
+  },
+  "proposed_server_diagnostic": {
+    "status": "registered",
+    "sentinel_episodes": 16,
+    "branch_table_episodes": 832,
+    "total_episode_cap": 848,
+    "sentinel_tick_cap": 1920,
+    "branch_table_tick_cap": 99840,
+    "total_tick_cap": 101760,
+    "total_request_cap": 20352,
+    "training_transitions": 0,
+    "order": [
+      "16 legacy replay sentinels",
+      "all 6 constant plans x32 conditions =192 anchor episodes",
+      "remaining20 plans x32=640 episodes only after technical gate"
+    ],
+    "technical_gate": "All sentinels pass and all192 anchor outcomes complete with valid audited motion. Matched nominal32/32 valid, contact-free. No dropping failed conditions.",
+    "evidence_gate": "For an input and a shared branch time, compare H-specific suffix upper bound with the best whole plan among ALL26 chosen per input by mean over H. Positive utility alone is insufficient: require new-risk-condition advantage on >=2 distinct original cases and legal target observations before different applied actions/outcomes. This is a small engineering progression gate, not significance.",
+    "strong_controls": [
+      "all6 constants including lane4/maxbrake",
+      "per-input best full26-plan mean-H choice",
+      "global fixed plan",
+      "matched nominal"
+    ],
+    "failure": "Stop at registered cap; retain invalid/partial/failed costs. No automatic seed/step/H/band/case/branch-grid expansion or PPO.",
+    "positive": "Freeze an explicit causal branch rule, then separately register execution plus target-only information control before any learned policy claim; not included in this native cap."
+  },
+  "implementation_gaps": [],
+  "paper": "B1 and this offline diagnostic remain controlled negative evidence. Novel method, external target/recording validation, strong search and simple-feedback comparisons are still required.",
+  "design_contract_sha256": "d721e14f95e605de9be0da9e51f7deb088330b04df9a49671c14e8ea641a8bf2",
+  "registration": {
+    "native_work_at_freeze": 0,
+    "training_transitions": 0,
+    "budget_correction": "Prior design actor count16960 was an arithmetic error. 848episodes*24decisions=20352. Episode/tick caps and all26plans unchanged; corrected before any B2 native work.",
+    "planned_actor_slots": 20352,
+    "prior_design_actor_slots": 16960,
+    "observation": "B1 causal108D scene history with completed current B2 reference; composite request/reference metadata logged separately. No trained policy in this study.",
+    "execution": "One capped table, technical gate may end after192anchors. Failed/partial work counts. Complete-record resume only; unresolved records require reconciliation."
+  }
+}

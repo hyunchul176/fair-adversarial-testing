@@ -1,0 +1,362 @@
+{
+ "n": 992,
+ "errors": 0,
+ "by": {
+  "S0|ladder:following:0": {
+   "n": 62,
+   "success": 52,
+   "rate": 83.9,
+   "ci": [
+    74.2,
+    93.5
+   ],
+   "carla_cc_hit": 1,
+   "carla_fair": 51,
+   "carla_robust": 39,
+   "carla_unchecked": 0,
+   "queries_median": 8.5,
+   "queries_mean": 10.2,
+   "sut_queries": 888,
+   "cc_replays": 94755,
+   "stops": {
+    "success": 52,
+    "budget": 10
+   }
+  },
+  "S0|ladder:following_aeb:0": {
+   "n": 62,
+   "success": 1,
+   "rate": 1.6,
+   "ci": [
+    0.0,
+    4.9
+   ],
+   "carla_cc_hit": 0,
+   "carla_fair": 1,
+   "carla_robust": 1,
+   "carla_unchecked": 0,
+   "queries_median": 10.0,
+   "queries_mean": 10.0,
+   "sut_queries": 2206,
+   "cc_replays": 286306,
+   "stops": {
+    "budget": 61,
+    "success": 1
+   }
+  },
+  "S0|ladder:rss_sut:0": {
+   "n": 62,
+   "success": 1,
+   "rate": 1.6,
+   "ci": [
+    0.0,
+    4.8
+   ],
+   "carla_cc_hit": 1,
+   "carla_fair": 0,
+   "carla_robust": 0,
+   "carla_unchecked": 0,
+   "queries_median": 14.0,
+   "queries_mean": 14.0,
+   "sut_queries": 2210,
+   "cc_replays": 312748,
+   "stops": {
+    "budget": 61,
+    "success": 1
+   }
+  },
+  "S0|ladder:rss_lat_sut:0": {
+   "n": 62,
+   "success": 0,
+   "rate": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "carla_cc_hit": 0,
+   "carla_fair": 0,
+   "carla_robust": 0,
+   "carla_unchecked": 0,
+   "queries_median": null,
+   "queries_mean": null,
+   "sut_queries": 2232,
+   "cc_replays": 278886,
+   "stops": {
+    "budget": 62
+   }
+  },
+  "S0|ba:cautious": {
+   "n": 62,
+   "success": 30,
+   "rate": 48.4,
+   "ci": [
+    35.5,
+    61.3
+   ],
+   "carla_cc_hit": 1,
+   "carla_fair": 29,
+   "carla_robust": 28,
+   "carla_unchecked": 0,
+   "queries_median": 10.5,
+   "queries_mean": 12.4,
+   "sut_queries": 1523,
+   "cc_replays": 146452,
+   "stops": {
+    "success": 30,
+    "budget": 32
+   }
+  },
+  "S0|ba:normal": {
+   "n": 62,
+   "success": 32,
+   "rate": 51.6,
+   "ci": [
+    38.7,
+    64.5
+   ],
+   "carla_cc_hit": 1,
+   "carla_fair": 31,
+   "carla_robust": 29,
+   "carla_unchecked": 0,
+   "queries_median": 10.5,
+   "queries_mean": 11.3,
+   "sut_queries": 1441,
+   "cc_replays": 164736,
+   "stops": {
+    "success": 32,
+    "budget": 30
+   }
+  },
+  "S0|ba:aggressive": {
+   "n": 62,
+   "success": 40,
+   "rate": 64.5,
+   "ci": [
+    53.2,
+    77.4
+   ],
+   "carla_cc_hit": 1,
+   "carla_fair": 39,
+   "carla_robust": 32,
+   "carla_unchecked": 0,
+   "queries_median": 12.0,
+   "queries_mean": 13.6,
+   "sut_queries": 1334,
+   "cc_replays": 123702,
+   "stops": {
+    "success": 40,
+    "budget": 22
+   }
+  },
+  "S0|tm:default": {
+   "n": 62,
+   "success": 0,
+   "rate": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "carla_cc_hit": 0,
+   "carla_fair": 0,
+   "carla_robust": 0,
+   "carla_unchecked": 0,
+   "queries_median": null,
+   "queries_mean": null,
+   "sut_queries": 2232,
+   "cc_replays": 318971,
+   "stops": {
+    "budget": 62
+   }
+  },
+  "S1|ladder:following:0": {
+   "n": 62,
+   "success": 54,
+   "rate": 87.1,
+   "ci": [
+    79.0,
+    95.2
+   ],
+   "carla_cc_hit": 0,
+   "carla_fair": 54,
+   "carla_robust": 52,
+   "carla_unchecked": 0,
+   "queries_median": 10.0,
+   "queries_mean": 10.9,
+   "sut_queries": 879,
+   "cc_replays": 91206,
+   "stops": {
+    "success": 54,
+    "budget": 8
+   }
+  },
+  "S1|ladder:following_aeb:0": {
+   "n": 62,
+   "success": 1,
+   "rate": 1.6,
+   "ci": [
+    0.0,
+    4.9
+   ],
+   "carla_cc_hit": 0,
+   "carla_fair": 1,
+   "carla_robust": 1,
+   "carla_unchecked": 0,
+   "queries_median": 19.0,
+   "queries_mean": 19.0,
+   "sut_queries": 2215,
+   "cc_replays": 286052,
+   "stops": {
+    "budget": 61,
+    "success": 1
+   }
+  },
+  "S1|ladder:rss_sut:0": {
+   "n": 62,
+   "success": 1,
+   "rate": 1.6,
+   "ci": [
+    0.0,
+    4.8
+   ],
+   "carla_cc_hit": 0,
+   "carla_fair": 1,
+   "carla_robust": 1,
+   "carla_unchecked": 0,
+   "queries_median": 13.0,
+   "queries_mean": 13.0,
+   "sut_queries": 2209,
+   "cc_replays": 330562,
+   "stops": {
+    "budget": 61,
+    "success": 1
+   }
+  },
+  "S1|ladder:rss_lat_sut:0": {
+   "n": 62,
+   "success": 0,
+   "rate": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "carla_cc_hit": 0,
+   "carla_fair": 0,
+   "carla_robust": 0,
+   "carla_unchecked": 0,
+   "queries_median": null,
+   "queries_mean": null,
+   "sut_queries": 2232,
+   "cc_replays": 317944,
+   "stops": {
+    "budget": 62
+   }
+  },
+  "S1|ba:cautious": {
+   "n": 62,
+   "success": 31,
+   "rate": 50.0,
+   "ci": [
+    37.1,
+    62.9
+   ],
+   "carla_cc_hit": 0,
+   "carla_fair": 31,
+   "carla_robust": 31,
+   "carla_unchecked": 0,
+   "queries_median": 11.0,
+   "queries_mean": 13.1,
+   "sut_queries": 1523,
+   "cc_replays": 172097,
+   "stops": {
+    "success": 31,
+    "budget": 31
+   }
+  },
+  "S1|ba:normal": {
+   "n": 62,
+   "success": 32,
+   "rate": 51.6,
+   "ci": [
+    40.3,
+    64.5
+   ],
+   "carla_cc_hit": 0,
+   "carla_fair": 32,
+   "carla_robust": 32,
+   "carla_unchecked": 0,
+   "queries_median": 12.0,
+   "queries_mean": 13.8,
+   "sut_queries": 1521,
+   "cc_replays": 204568,
+   "stops": {
+    "success": 32,
+    "budget": 30
+   }
+  },
+  "S1|ba:aggressive": {
+   "n": 62,
+   "success": 39,
+   "rate": 62.9,
+   "ci": [
+    51.6,
+    74.2
+   ],
+   "carla_cc_hit": 0,
+   "carla_fair": 39,
+   "carla_robust": 38,
+   "carla_unchecked": 0,
+   "queries_median": 12.0,
+   "queries_mean": 14.7,
+   "sut_queries": 1400,
+   "cc_replays": 150351,
+   "stops": {
+    "success": 39,
+    "budget": 23
+   }
+  },
+  "S1|tm:default": {
+   "n": 62,
+   "success": 0,
+   "rate": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ],
+   "carla_cc_hit": 0,
+   "carla_fair": 0,
+   "carla_robust": 0,
+   "carla_unchecked": 0,
+   "queries_median": null,
+   "queries_mean": null,
+   "sut_queries": 2232,
+   "cc_replays": 341084,
+   "stops": {
+    "budget": 62
+   }
+  }
+ },
+ "E4_H1": {
+  "successes": 158,
+  "carla_cc_hit": 0,
+  "share": 0.0,
+  "supported": true
+ },
+ "E4_H2": {
+  "ladder:following_aeb:0": {
+   "rate": 1.6,
+   "supported": true
+  },
+  "ladder:rss_sut:0": {
+   "rate": 1.6,
+   "supported": true
+  },
+  "ladder:rss_lat_sut:0": {
+   "rate": 0.0,
+   "supported": true
+  },
+  "tm:default": {
+   "rate": 0.0,
+   "supported": true
+  }
+ }
+}

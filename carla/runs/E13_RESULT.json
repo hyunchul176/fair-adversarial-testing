@@ -1,0 +1,182 @@
+{
+ "n": 496,
+ "errors": 0,
+ "by": {
+  "ladder:following:0": {
+   "n": 62,
+   "found": 54,
+   "found_rate": 87.1,
+   "ci": [
+    77.4,
+    95.2
+   ],
+   "attacker": 38,
+   "carla_fair": 16,
+   "carla_robust": 13,
+   "twin_s1_admissible": 1,
+   "final": 1,
+   "final_rate_of_cases": 1.6,
+   "queries_median": 6.0,
+   "e4_s1_rate": 87.1,
+   "attacker_share": 70.4
+  },
+  "ladder:following_aeb:0": {
+   "n": 62,
+   "found": 53,
+   "found_rate": 85.5,
+   "ci": [
+    75.8,
+    93.5
+   ],
+   "attacker": 53,
+   "carla_fair": 0,
+   "carla_robust": 0,
+   "twin_s1_admissible": 0,
+   "final": 0,
+   "final_rate_of_cases": 0.0,
+   "queries_median": 7.0,
+   "e4_s1_rate": 1.6,
+   "attacker_share": 100.0
+  },
+  "ladder:rss_sut:0": {
+   "n": 62,
+   "found": 51,
+   "found_rate": 82.3,
+   "ci": [
+    72.6,
+    91.9
+   ],
+   "attacker": 51,
+   "carla_fair": 0,
+   "carla_robust": 0,
+   "twin_s1_admissible": 0,
+   "final": 0,
+   "final_rate_of_cases": 0.0,
+   "queries_median": 8.0,
+   "e4_s1_rate": 1.6,
+   "attacker_share": 100.0
+  },
+  "ladder:rss_lat_sut:0": {
+   "n": 62,
+   "found": 52,
+   "found_rate": 83.9,
+   "ci": [
+    74.2,
+    91.9
+   ],
+   "attacker": 52,
+   "carla_fair": 0,
+   "carla_robust": 0,
+   "twin_s1_admissible": 0,
+   "final": 0,
+   "final_rate_of_cases": 0.0,
+   "queries_median": 9.0,
+   "e4_s1_rate": 0.0,
+   "attacker_share": 100.0
+  },
+  "ba:cautious": {
+   "n": 62,
+   "found": 54,
+   "found_rate": 87.1,
+   "ci": [
+    77.4,
+    95.2
+   ],
+   "attacker": 37,
+   "carla_fair": 17,
+   "carla_robust": 13,
+   "twin_s1_admissible": 2,
+   "final": 2,
+   "final_rate_of_cases": 3.2,
+   "queries_median": 7.0,
+   "e4_s1_rate": 50.0,
+   "attacker_share": 68.5
+  },
+  "ba:normal": {
+   "n": 62,
+   "found": 54,
+   "found_rate": 87.1,
+   "ci": [
+    79.0,
+    95.2
+   ],
+   "attacker": 37,
+   "carla_fair": 17,
+   "carla_robust": 12,
+   "twin_s1_admissible": 1,
+   "final": 1,
+   "final_rate_of_cases": 1.6,
+   "queries_median": 6.5,
+   "e4_s1_rate": 51.6,
+   "attacker_share": 68.5
+  },
+  "ba:aggressive": {
+   "n": 62,
+   "found": 53,
+   "found_rate": 85.5,
+   "ci": [
+    75.8,
+    93.5
+   ],
+   "attacker": 37,
+   "carla_fair": 16,
+   "carla_robust": 13,
+   "twin_s1_admissible": 2,
+   "final": 2,
+   "final_rate_of_cases": 3.2,
+   "queries_median": 6.0,
+   "e4_s1_rate": 62.9,
+   "attacker_share": 69.8
+  },
+  "tm:default": {
+   "n": 62,
+   "found": 53,
+   "found_rate": 85.5,
+   "ci": [
+    75.8,
+    93.5
+   ],
+   "attacker": 39,
+   "carla_fair": 14,
+   "carla_robust": 0,
+   "twin_s1_admissible": 0,
+   "final": 0,
+   "final_rate_of_cases": 0.0,
+   "queries_median": 8.0,
+   "e4_s1_rate": 0.0,
+   "attacker_share": 73.6
+  }
+ },
+ "E13_H1": {
+  "rates": {
+   "ladder:following:0": 87.1,
+   "ladder:following_aeb:0": 85.5,
+   "ladder:rss_sut:0": 82.3,
+   "ladder:rss_lat_sut:0": 83.9,
+   "ba:cautious": 87.1,
+   "ba:normal": 87.1,
+   "ba:aggressive": 85.5,
+   "tm:default": 85.5
+  },
+  "supported": true
+ },
+ "E13_H2": {
+  "found": 209,
+  "attacker": 195,
+  "final": 0,
+  "share": 93.3,
+  "by_kind": {
+   "ladder:following_aeb:0": 100.0,
+   "ladder:rss_sut:0": 100.0,
+   "ladder:rss_lat_sut:0": 100.0,
+   "tm:default": 73.6
+  },
+  "supported": true
+ },
+ "E13_H3": {
+  "final": 0,
+  "found": 209,
+  "share": 0.0,
+  "supported": true
+ }
+}

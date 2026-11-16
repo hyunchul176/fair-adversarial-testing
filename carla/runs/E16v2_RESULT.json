@@ -1,0 +1,239 @@
+{
+ "prop": {
+  "U": {
+   "n": 3207,
+   "agreement": 91.7,
+   "carla_cc_hit_all": 8.3,
+   "certified": 3207,
+   "retained": 100.0,
+   "cc_hit_certified": 8.3,
+   "transfer_certified": 61.8,
+   "transfer_all": 61.8
+  },
+  "M": {
+   "n": 3207,
+   "agreement": 96.0,
+   "carla_cc_hit_all": 8.3,
+   "certified": 2415,
+   "retained": 75.3,
+   "cc_hit_certified": 0.0,
+   "transfer_certified": 70.2,
+   "transfer_all": 61.8,
+   "by_sut": {
+    "following_H0": {
+     "n": 1101,
+     "retained": 87.8,
+     "cc_hit_certified": 0.0,
+     "transfer_certified": 80.1
+    },
+    "following_H0.5": {
+     "n": 988,
+     "retained": 61.5,
+     "cc_hit_certified": 0.0,
+     "transfer_certified": 36.5
+    },
+    "following_H1": {
+     "n": 552,
+     "retained": 28.3,
+     "cc_hit_certified": 0.0,
+     "transfer_certified": 35.3
+    },
+    "reference_idm_H0": {
+     "n": 1095,
+     "retained": 88.4,
+     "cc_hit_certified": 0.0,
+     "transfer_certified": 79.6
+    },
+    "following_aeb_H0": {
+     "n": 279,
+     "retained": 23.7,
+     "cc_hit_certified": 0.0,
+     "transfer_certified": 18.2
+    },
+    "rss_sut_H0": {
+     "n": 81,
+     "retained": 25.9,
+     "cc_hit_certified": 0.0,
+     "transfer_certified": 14.3
+    },
+    "following_aeb_H0.5": {
+     "n": 207,
+     "retained": 17.4,
+     "cc_hit_certified": 0.0,
+     "transfer_certified": 8.3
+    },
+    "rss_lat_sut_H0": {
+     "n": 6,
+     "retained": 0.0,
+     "cc_hit_certified": null,
+     "transfer_certified": null
+    }
+   }
+  }
+ },
+ "metric": {
+  "U": {
+   "n": 3207,
+   "agreement": 42.9,
+   "carla_cc_hit_all": 57.1,
+   "certified": 3207,
+   "retained": 100.0,
+   "cc_hit_certified": 57.1,
+   "transfer_certified": 40.8,
+   "transfer_all": 40.8
+  },
+  "MM": {
+   "n": 3207,
+   "agreement": 96.1,
+   "carla_cc_hit_all": 57.1,
+   "certified": 862,
+   "retained": 26.9,
+   "cc_hit_certified": 0.0,
+   "transfer_certified": 94.7,
+   "transfer_all": 40.8,
+   "by_sut": {
+    "following_H0": {
+     "n": 1101,
+     "retained": 38.9,
+     "cc_hit_certified": 0.0,
+     "transfer_certified": 95.1
+    },
+    "following_H0.5": {
+     "n": 988,
+     "retained": 6.0,
+     "cc_hit_certified": 0.0,
+     "transfer_certified": 79.7
+    },
+    "following_H1": {
+     "n": 552,
+     "retained": 0.0,
+     "cc_hit_certified": null,
+     "transfer_certified": null
+    },
+    "reference_idm_H0": {
+     "n": 1095,
+     "retained": 39.4,
+     "cc_hit_certified": 0.0,
+     "transfer_certified": 96.5
+    },
+    "following_aeb_H0": {
+     "n": 279,
+     "retained": 0.0,
+     "cc_hit_certified": null,
+     "transfer_certified": null
+    },
+    "rss_sut_H0": {
+     "n": 81,
+     "retained": 0.0,
+     "cc_hit_certified": null,
+     "transfer_certified": null
+    },
+    "following_aeb_H0.5": {
+     "n": 207,
+     "retained": 0.0,
+     "cc_hit_certified": null,
+     "transfer_certified": null
+    },
+    "rss_lat_sut_H0": {
+     "n": 6,
+     "retained": 0.0,
+     "cc_hit_certified": null,
+     "transfer_certified": null
+    }
+   }
+  }
+ },
+ "tesla": {
+  "U": {
+   "n": 514,
+   "agreement": 96.9,
+   "carla_cc_hit_all": 3.1,
+   "certified": 514,
+   "retained": 100.0,
+   "cc_hit_certified": 3.1,
+   "transfer_certified": 39.9,
+   "transfer_all": 39.9
+  },
+  "M": {
+   "n": 514,
+   "agreement": 96.5,
+   "carla_cc_hit_all": 3.1,
+   "certified": 418,
+   "retained": 81.3,
+   "cc_hit_certified": 0.0,
+   "transfer_certified": 41.6,
+   "transfer_all": 39.9
+  },
+  "T": {
+   "n": 514,
+   "agreement": 95.5,
+   "carla_cc_hit_all": 3.1,
+   "certified": 405,
+   "retained": 78.8,
+   "cc_hit_certified": 0.0,
+   "transfer_certified": 42.0,
+   "transfer_all": 39.9,
+   "by_sut": {
+    "following_H0": {
+     "n": 171,
+     "retained": 89.5,
+     "cc_hit_certified": 0.0,
+     "transfer_certified": 55.6
+    },
+    "following_H0.5": {
+     "n": 160,
+     "retained": 60.0,
+     "cc_hit_certified": 0.0,
+     "transfer_certified": 2.1
+    },
+    "following_H1": {
+     "n": 51,
+     "retained": 31.4,
+     "cc_hit_certified": 0.0,
+     "transfer_certified": 0.0
+    },
+    "reference_idm_H0": {
+     "n": 171,
+     "retained": 88.9,
+     "cc_hit_certified": 0.0,
+     "transfer_certified": 55.9
+    },
+    "following_aeb_H0": {
+     "n": 9,
+     "retained": 0.0,
+     "cc_hit_certified": null,
+     "transfer_certified": null
+    },
+    "rss_sut_H0": {
+     "n": 3,
+     "retained": 0.0,
+     "cc_hit_certified": null,
+     "transfer_certified": null
+    }
+   }
+  }
+ },
+ "hypotheses": {
+  "M~prop": {
+   "agreement": 96.0,
+   "unmatched": 91.7,
+   "H1": true,
+   "cc_hit_certified": 0.0,
+   "H2": true
+  },
+  "MM~metric": {
+   "agreement": 96.1,
+   "unmatched": 42.9,
+   "H1": true,
+   "cc_hit_certified": 0.0,
+   "H2": true
+  },
+  "T~tesla": {
+   "agreement": 95.5,
+   "unmatched": 96.9,
+   "H1": false,
+   "cc_hit_certified": 0.0,
+   "H2": true
+  }
+ }
+}

@@ -1,0 +1,80 @@
+{
+ "by_sut": {
+  "following_H0": {
+   "n": 980,
+   "carla_sut_hit": 85.1,
+   "agree_U": 85.1,
+   "twin_U_hit": 100.0,
+   "agree_M": 94.8,
+   "twin_M_hit": 90.1
+  },
+  "following_H0.5": {
+   "n": 778,
+   "carla_sut_hit": 40.9,
+   "agree_U": 40.9,
+   "twin_U_hit": 100.0,
+   "agree_M": 84.2,
+   "twin_M_hit": 49.5
+  },
+  "following_H1": {
+   "n": 278,
+   "carla_sut_hit": 30.6,
+   "agree_U": 30.6,
+   "twin_U_hit": 100.0,
+   "agree_M": 82.0,
+   "twin_M_hit": 33.5
+  },
+  "reference_idm_H0": {
+   "n": 978,
+   "carla_sut_hit": 84.7,
+   "agree_U": 84.7,
+   "twin_U_hit": 100.0,
+   "agree_M": 93.9,
+   "twin_M_hit": 89.8
+  },
+  "following_aeb_H0": {
+   "n": 94,
+   "carla_sut_hit": 22.3,
+   "agree_U": 22.3,
+   "twin_U_hit": 100.0,
+   "agree_M": 91.5,
+   "twin_M_hit": 30.9
+  },
+  "following_aeb_H0.5": {
+   "n": 70,
+   "carla_sut_hit": 17.1,
+   "agree_U": 17.1,
+   "twin_U_hit": 100.0,
+   "agree_M": 94.3,
+   "twin_M_hit": 22.9
+  },
+  "rss_sut_H0": {
+   "n": 27,
+   "carla_sut_hit": 22.2,
+   "agree_U": 22.2,
+   "twin_U_hit": 100.0,
+   "agree_M": 85.2,
+   "twin_M_hit": 29.6
+  },
+  "rss_lat_sut_H0": {
+   "n": 2,
+   "carla_sut_hit": 100.0,
+   "agree_U": 100.0,
+   "twin_U_hit": 100.0,
+   "agree_M": 100.0,
+   "twin_M_hit": 100.0
+  }
+ },
+ "H1": {
+  "weak_agree_U": 68.5,
+  "weak_agree_M": 90.6,
+  "supported": true
+ },
+ "H2": {
+  "following_H0": 980,
+  "recertified": 782,
+  "transfer_recertified": 93.7,
+  "transfer_all": 84.1,
+  "supported": true
+ }
+}

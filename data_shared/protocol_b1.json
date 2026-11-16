@@ -1,0 +1,526 @@
+{
+  "version": "adversarial-agent-B3-frozen-B1-development-transfer-v1",
+  "status": "design_locked_runner_analyzer_and_dispatch_not_implemented",
+  "objective": "Evaluate frozen B1 agent physical risk generation and paired maximum-brake comparison on research-exposed development events.",
+  "action_family": "B1",
+  "time": {
+    "physics_hz": 10,
+    "decision_hz": 2,
+    "ticks_per_action": 5,
+    "horizon_s": 12,
+    "max_ticks": 120,
+    "max_actions": 24
+  },
+  "action": {
+    "type": "Discrete",
+    "n": 3,
+    "requests_mps2": [
+      0,
+      -3,
+      3
+    ],
+    "request_hold": "Hold scalar acceleration request for five physics ticks; project anew each tick using current speed and prior actual acceleration.",
+    "projection": "Unchanged adversarial_native_action.acceleration_command; record requested, representable and applied values.",
+    "reversible": true,
+    "forced_release": false,
+    "one_shot_phase": false,
+    "generator_collision_shield": false,
+    "lateral": "Unchanged observed_midpoint_continue path and quantization-aware steering mapping. Keep lateral path/ay/jy/road checks.",
+    "authority_limit": "Fixed lateral motion remains exogenous; direct scalar acceleration owns only longitudinal maneuver. No exact Markov assumption."
+  },
+  "physical_bounds": {
+    "generator_scalar_speed_mps": [
+      15,
+      40
+    ],
+    "generator_acceleration_abs_mps2": 3,
+    "generator_jerk_abs_mps3": 2,
+    "steering_abs_rad": 0.3,
+    "steering_slew_abs_radps": 0.15,
+    "lateral_acceleration_abs_mps2": 2,
+    "lateral_jerk_abs_mps3": 4,
+    "lateral_path_error_max_m": 1e-05,
+    "target_acceleration_abs_mps2": 5,
+    "target_jerk_abs_mps3": 2.5,
+    "target_initial_speed_mps": [
+      15,
+      35
+    ],
+    "audit_tolerance": 1e-05,
+    "native_command_quantization_must_be_verified": true
+  },
+  "observation": {
+    "features": [
+      {
+        "name": "relative_x",
+        "divisor": 100
+      },
+      {
+        "name": "relative_y",
+        "divisor": 4
+      },
+      {
+        "name": "generator_vx",
+        "divisor": 40
+      },
+      {
+        "name": "generator_vy",
+        "divisor": 10
+      },
+      {
+        "name": "target_vx",
+        "divisor": 40
+      },
+      {
+        "name": "target_vy",
+        "divisor": 10
+      },
+      {
+        "name": "generator_sin_heading",
+        "divisor": 1
+      },
+      {
+        "name": "generator_cos_heading",
+        "divisor": 1
+      },
+      {
+        "name": "target_sin_heading",
+        "divisor": 1
+      },
+      {
+        "name": "target_cos_heading",
+        "divisor": 1
+      },
+      {
+        "name": "previous_generator_scalar_acceleration",
+        "divisor": 3
+      },
+      {
+        "name": "previous_target_scalar_acceleration",
+        "divisor": 5
+      },
+      {
+        "name": "acceleration_history_valid",
+        "divisor": 1
+      },
+      {
+        "name": "elapsed_s",
+        "divisor": 12
+      },
+      {
+        "name": "current_lateral_reference_y",
+        "divisor": 4
+      },
+      {
+        "name": "previous_applied_steering",
+        "divisor": 0.3
+      },
+      {
+        "name": "current_q",
+        "divisor": 1
+      },
+      {
+        "name": "ttc_defined",
+        "divisor": 1
+      },
+      {
+        "name": "running_maximum_q",
+        "divisor": 1
+      },
+      {
+        "name": "initial_generator_scalar_speed",
+        "divisor": 40
+      },
+      {
+        "name": "current_generator_scalar_speed",
+        "divisor": 40
+      },
+      {
+        "name": "previous_requested_acceleration",
+        "divisor": 3
+      },
+      {
+        "name": "generator_length",
+        "divisor": 5
+      },
+      {
+        "name": "generator_width",
+        "divisor": 2
+      },
+      {
+        "name": "target_length",
+        "divisor": 5
+      },
+      {
+        "name": "target_width",
+        "divisor": 2
+      }
+    ],
+    "frame_dimensions": 26,
+    "frames": 4,
+    "frame_spacing_s": 0.5,
+    "maximum_history_s": 1.5,
+    "shape": [
+      108
+    ],
+    "layout": "Flatten oldest-to-newest four 26D frames, then four frame-validity masks in matching order.",
+    "padding": "Unavailable frames all zero with mask 0; current reset frame mask 1. Reset history and previous request to 0 per episode.",
+    "dtype": "float32",
+    "normalization": "Divide, clip each feature to [-1,1]; log unclipped values and per-feature saturation counts.",
+    "snapshot": "Before target.act; prior completed native tick only. No current target pending action.",
+    "reactive": "All current causal features and history.",
+    "initial_context": "For each available historical decision, clone reset frame and update only elapsed_s to that decision time and previous_requested_acceleration to its own request immediately preceding that decision. Store that frame then; do not copy current time/request into older frames. All other fields stay reset values including history_valid=0. Same masks and108D architecture. No postreset scene/actuator values enter actor or critic.",
+    "forbidden": [
+      "case/input ID",
+      "target H/ID/controller parameters",
+      "future lateral or longitudinal samples",
+      "future risk",
+      "target pending action",
+      "test outcomes"
+    ],
+    "partial_observation": "History does not guarantee sufficient state; future lateral profile remains hidden."
+  },
+  "reward": {
+    "version": "running-maximum-risk-v1",
+    "dense_ttc_horizon_s": 3,
+    "evaluation_noncontact_ttc_threshold_s": 1.5,
+    "risk": "q=clip(1-TTC/3,0,1); successful geometry with no predicted contact gives q=0 and defined=false",
+    "ongoing": "M=max(Mprev,q); r=M-Mprev",
+    "intended_contact": "r=2-Mprev ONLY after independent pair attribution and preimpact maneuver qualification",
+    "maneuver_invalid": "r=-1-Mprev; execution/measurement errors raise instead",
+    "initial_maximum": "q(initial_state)",
+    "gamma": 1.0,
+    "horizon_bootstrap": 0,
+    "horizon_semantics": "finite task termination, not time-limit bootstrap",
+    "reward_clipping": false,
+    "adaptive_reward_normalization": false,
+    "underlying_headway_reward_used": false,
+    "risk_accumulator_is_not_final_audit_metric": true
+  },
+  "nominal": {
+    "plan_id": 0,
+    "new_family_zero_acceleration": true,
+    "old_results_are_baseline": false,
+    "generated_event": "Valid intended contact or valid noncontact TTC<1.5 s, initial state not already event, and same input/H new-family zero has no event.",
+    "incremental_q": "Report Q_policy-Q_zero and contact transitions separately, including already-risky nominal conditions."
+  },
+  "protocol_document_sha256": "24d1f4142a89ccfc348504ecb0a3f05f942f85e033a2692401ed6fc3ab855983",
+  "data": {
+    "hashes": {
+      "b1_immutable_contract.json": "b62d32f5314fbe9c13d34632486b813238d931f1bce8eba13455d73f0f1c203e",
+      "base_protocol.json": "8124221550239ee5caca64b51b19a7f49e9b8c1f0d5cc9ffedf6d859548c6707",
+      "cohort_override_metadata.json": "05ebc77a0fe80d7fe7c85bd3de310dee060574302feb199c862a33c7a83d15a0",
+      "pilot_inputs.json": "394ba13322ec51bbeff136a1c5756e853117f6d616eafee9e8076f6da1ef2c26",
+      "selected_cases.json": "7ca85efd56df1b57fc4f3eef223d14e6b272821f0b824c0b67fe35c068a17a19"
+    },
+    "input_count": 16,
+    "unique_original_cases": 16,
+    "recordings": [
+      58,
+      59,
+      60
+    ],
+    "condition_count": 32,
+    "raw_access": false,
+    "final_test_access": false,
+    "new_training": false,
+    "exposure": "Project/target-response-exposed development; B1-policy and B1-training-recording disjoint.",
+    "selection_manifest_sha256": "af277e25ddf55f3fa0926eb7d9d5eb8ca5fee5ba813286068dbb3843a68a7a94",
+    "selection_registration_sha256": "2d23947a9669120972960430ebc5679874dd3644065c2d2e99fa51a67f503fc6",
+    "no_outcome_based_replacement": true,
+    "original_inputs_only": true
+  },
+  "inputs": [
+    {
+      "input_id": 0,
+      "case_id": 11,
+      "event_id": "58:521:7121",
+      "scenario": "original",
+      "gap_delta_m": 0.0,
+      "speed_delta_mps": 0.0,
+      "initial_gap_m": 8.846249999999964,
+      "target_initial_and_cruise_mps": 34.49,
+      "eligibility": "initial_domain_pass",
+      "selection_role": "metadata_hash_balanced_development_transfer",
+      "online_maneuver_validity": "not_yet_evaluated"
+    },
+    {
+      "input_id": 1,
+      "case_id": 22,
+      "event_id": "59:196:2796",
+      "scenario": "original",
+      "gap_delta_m": 0.0,
+      "speed_delta_mps": 0.0,
+      "initial_gap_m": 7.0133333333333425,
+      "target_initial_and_cruise_mps": 29.257333333333335,
+      "eligibility": "initial_domain_pass",
+      "selection_role": "metadata_hash_balanced_development_transfer",
+      "online_maneuver_validity": "not_yet_evaluated"
+    },
+    {
+      "input_id": 2,
+      "case_id": 62,
+      "event_id": "60:735:11848",
+      "scenario": "original",
+      "gap_delta_m": 0.0,
+      "speed_delta_mps": 0.0,
+      "initial_gap_m": 8.632249999999917,
+      "target_initial_and_cruise_mps": 26.78,
+      "eligibility": "initial_domain_pass",
+      "selection_role": "metadata_hash_balanced_development_transfer",
+      "online_maneuver_validity": "not_yet_evaluated"
+    },
+    {
+      "input_id": 3,
+      "case_id": 4,
+      "event_id": "58:200:2531",
+      "scenario": "original",
+      "gap_delta_m": 0.0,
+      "speed_delta_mps": 0.0,
+      "initial_gap_m": 60.89600000000001,
+      "target_initial_and_cruise_mps": 29.088,
+      "eligibility": "initial_domain_pass",
+      "selection_role": "metadata_hash_balanced_development_transfer",
+      "online_maneuver_validity": "not_yet_evaluated"
+    },
+    {
+      "input_id": 4,
+      "case_id": 26,
+      "event_id": "59:276:4271",
+      "scenario": "original",
+      "gap_delta_m": 0.0,
+      "speed_delta_mps": 0.0,
+      "initial_gap_m": 7.240999999999959,
+      "target_initial_and_cruise_mps": 27.080999999999996,
+      "eligibility": "initial_domain_pass",
+      "selection_role": "metadata_hash_balanced_development_transfer",
+      "online_maneuver_validity": "not_yet_evaluated"
+    },
+    {
+      "input_id": 5,
+      "case_id": 48,
+      "event_id": "60:332:4870",
+      "scenario": "original",
+      "gap_delta_m": 0.0,
+      "speed_delta_mps": 0.0,
+      "initial_gap_m": 15.942714285714283,
+      "target_initial_and_cruise_mps": 22.995285714285714,
+      "eligibility": "initial_domain_pass",
+      "selection_role": "metadata_hash_balanced_development_transfer",
+      "online_maneuver_validity": "not_yet_evaluated"
+    },
+    {
+      "input_id": 6,
+      "case_id": 9,
+      "event_id": "58:388:5256",
+      "scenario": "original",
+      "gap_delta_m": 0.0,
+      "speed_delta_mps": 0.0,
+      "initial_gap_m": 8.780833333333309,
+      "target_initial_and_cruise_mps": 26.0,
+      "eligibility": "initial_domain_pass",
+      "selection_role": "metadata_hash_balanced_development_transfer",
+      "online_maneuver_validity": "not_yet_evaluated"
+    },
+    {
+      "input_id": 7,
+      "case_id": 19,
+      "event_id": "59:71:856",
+      "scenario": "original",
+      "gap_delta_m": 0.0,
+      "speed_delta_mps": 0.0,
+      "initial_gap_m": 4.8945000000001,
+      "target_initial_and_cruise_mps": 27.3735,
+      "eligibility": "initial_domain_pass",
+      "selection_role": "metadata_hash_balanced_development_transfer",
+      "online_maneuver_validity": "not_yet_evaluated"
+    },
+    {
+      "input_id": 8,
+      "case_id": 68,
+      "event_id": "60:881:14661",
+      "scenario": "original",
+      "gap_delta_m": 0.0,
+      "speed_delta_mps": 0.0,
+      "initial_gap_m": 18.048833333333167,
+      "target_initial_and_cruise_mps": 26.387833333333322,
+      "eligibility": "initial_domain_pass",
+      "selection_role": "metadata_hash_balanced_development_transfer",
+      "online_maneuver_validity": "not_yet_evaluated"
+    },
+    {
+      "input_id": 9,
+      "case_id": 2,
+      "event_id": "58:58:677",
+      "scenario": "original",
+      "gap_delta_m": 0.0,
+      "speed_delta_mps": 0.0,
+      "initial_gap_m": 13.744999999999951,
+      "target_initial_and_cruise_mps": 31.393250000000002,
+      "eligibility": "initial_domain_pass",
+      "selection_role": "metadata_hash_balanced_development_transfer",
+      "online_maneuver_validity": "not_yet_evaluated"
+    },
+    {
+      "input_id": 10,
+      "case_id": 30,
+      "event_id": "59:489:7997",
+      "scenario": "original",
+      "gap_delta_m": 0.0,
+      "speed_delta_mps": 0.0,
+      "initial_gap_m": 12.246999999999849,
+      "target_initial_and_cruise_mps": 32.390249999999995,
+      "eligibility": "initial_domain_pass",
+      "selection_role": "metadata_hash_balanced_development_transfer",
+      "online_maneuver_validity": "not_yet_evaluated"
+    },
+    {
+      "input_id": 11,
+      "case_id": 50,
+      "event_id": "60:423:6580",
+      "scenario": "original",
+      "gap_delta_m": 0.0,
+      "speed_delta_mps": 0.0,
+      "initial_gap_m": 16.471999999999944,
+      "target_initial_and_cruise_mps": 28.09,
+      "eligibility": "initial_domain_pass",
+      "selection_role": "metadata_hash_balanced_development_transfer",
+      "online_maneuver_validity": "not_yet_evaluated"
+    },
+    {
+      "input_id": 12,
+      "case_id": 15,
+      "event_id": "58:581:7951",
+      "scenario": "original",
+      "gap_delta_m": 0.0,
+      "speed_delta_mps": 0.0,
+      "initial_gap_m": 19.914499999999958,
+      "target_initial_and_cruise_mps": 32.39,
+      "eligibility": "initial_domain_pass",
+      "selection_role": "metadata_hash_balanced_development_transfer",
+      "online_maneuver_validity": "not_yet_evaluated"
+    },
+    {
+      "input_id": 13,
+      "case_id": 31,
+      "event_id": "59:534:8701",
+      "scenario": "original",
+      "gap_delta_m": 0.0,
+      "speed_delta_mps": 0.0,
+      "initial_gap_m": 35.32300000000022,
+      "target_initial_and_cruise_mps": 27.373666666666672,
+      "eligibility": "initial_domain_pass",
+      "selection_role": "metadata_hash_balanced_development_transfer",
+      "online_maneuver_validity": "not_yet_evaluated"
+    },
+    {
+      "input_id": 14,
+      "case_id": 49,
+      "event_id": "60:367:5364",
+      "scenario": "original",
+      "gap_delta_m": 0.0,
+      "speed_delta_mps": 0.0,
+      "initial_gap_m": 6.203750000000019,
+      "target_initial_and_cruise_mps": 30.86825,
+      "eligibility": "initial_domain_pass",
+      "selection_role": "metadata_hash_balanced_development_transfer",
+      "online_maneuver_validity": "not_yet_evaluated"
+    },
+    {
+      "input_id": 15,
+      "case_id": 12,
+      "event_id": "58:531:7136",
+      "scenario": "original",
+      "gap_delta_m": 0.0,
+      "speed_delta_mps": 0.0,
+      "initial_gap_m": 5.040499999999809,
+      "target_initial_and_cruise_mps": 32.23300000000002,
+      "eligibility": "initial_domain_pass",
+      "selection_role": "metadata_hash_balanced_development_transfer",
+      "online_maneuver_validity": "not_yet_evaluated"
+    }
+  ],
+  "methods": [
+    {
+      "id": "coast",
+      "action": 0
+    },
+    {
+      "id": "maximum_brake",
+      "action": 1
+    },
+    {
+      "id": "maximum_acceleration",
+      "action": 2
+    },
+    {
+      "id": "frozen_reactive_42",
+      "seed": 42,
+      "checkpoint_sha256": "3e7902bb0d59bb2f1216be3b5dd749d38c30a1bf28f97726050c6951cc257af3"
+    },
+    {
+      "id": "frozen_reactive_123",
+      "seed": 123,
+      "checkpoint_sha256": "2f09162d4b06b265bf81a0fa88c3b625ab4b483be2d7e82c818d25763eeb7cf9"
+    }
+  ],
+  "targets": {
+    "controller": "following",
+    "horizons_s": [
+      0.0,
+      0.5
+    ],
+    "authority": "unchanged B1 fixed lane4 target"
+  },
+  "sentinel": {
+    "type": "B1 final reactive42 historical originals",
+    "count": 16,
+    "registry_sha256": "796da472096d9e9b402b8b7f1cfa8708db1cdd964def482995ab0543af43b399",
+    "comparison": "exact canonical B1 trajectory_digest fields plus independent audit",
+    "separate_historical_input_factory": true
+  },
+  "budget": {
+    "sentinel": {
+      "starts": 16,
+      "ticks": 1920,
+      "actors": 384
+    },
+    "evaluation": {
+      "starts": 160,
+      "ticks": 19200,
+      "actors": 3840
+    },
+    "total": {
+      "starts": 176,
+      "ticks": 21120,
+      "actors": 4224
+    },
+    "training_transitions": 0,
+    "optimizer_updates": 0,
+    "automatic_retry_starts": 0
+  },
+  "gates": {
+    "D1": {
+      "valid_completed_per_seed_minimum": 31,
+      "registered_conditions_per_seed": 32,
+      "confirmed_generated_original_cases_per_seed_minimum": 2,
+      "technical_missingness": "unevaluable unless completed evidence independently recovered"
+    },
+    "D2": {
+      "requires_D1": true,
+      "net_generated_conditions_over_brake_per_seed_minimum": 2,
+      "original_cases_with_positive_gains_per_seed_minimum": 2,
+      "any_unresolved_compared_label_NA": "unevaluable",
+      "no_learning_or_online_information_causal_claim": true
+    }
+  },
+  "artifact_manifest_sha256": "e11bb0b26793ee27f2316f3bd60fa45c79b72db9a0fc20691cd7e62fd75c6814",
+  "implementation_remaining": [
+    "B3-specific durable ledger and campaign runner",
+    "B1 sentinel exact replay through frozen actor",
+    "independent B3 three-valued paired analyzer",
+    "mock integration/recovery/budget checks"
+  ],
+  "native_runs": 0,
+  "learning_transitions": 0
+}

@@ -1,0 +1,28 @@
+{
+ "sut_avoided|weak": {
+  "n": 949,
+  "geometry": 567,
+  "physics": 382
+ },
+ "cc_hit|weak": {
+  "n": 153,
+  "geometry": 153,
+  "physics": 0
+ },
+ "sut_avoided|capable": {
+  "n": 152,
+  "geometry": 71,
+  "physics": 81
+ },
+ "cc_hit|capable": {
+  "n": 112,
+  "geometry": 112,
+  "physics": 0
+ },
+ "control": {
+  "n": 200,
+  "sut_flip": 2,
+  "cc_flip": 0
+ },
+ "missing": 0
+}

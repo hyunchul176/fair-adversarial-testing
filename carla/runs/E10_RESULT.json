@@ -1,0 +1,98 @@
+{
+ "E2_rl|ba:aggressive": {
+  "robust": 13,
+  "recovered": 10,
+  "inside": 12,
+  "g2_fail": 0,
+  "joint_fail": 1,
+  "border": 3
+ },
+ "E2_rl|ba:cautious": {
+  "robust": 7,
+  "recovered": 5,
+  "inside": 6,
+  "g2_fail": 0,
+  "joint_fail": 1,
+  "border": 2
+ },
+ "E2_rl|ba:normal": {
+  "robust": 11,
+  "recovered": 9,
+  "inside": 10,
+  "g2_fail": 0,
+  "joint_fail": 1,
+  "border": 3
+ },
+ "E2_rl|ladder:following:0": {
+  "robust": 161,
+  "recovered": 155,
+  "inside": 158,
+  "g2_fail": 0,
+  "joint_fail": 3,
+  "border": 8
+ },
+ "E5A_noshield|ba:aggressive": {
+  "robust": 9,
+  "recovered": 6,
+  "inside": 8,
+  "g2_fail": 0,
+  "joint_fail": 1,
+  "border": 3
+ },
+ "E5A_noshield|ba:cautious": {
+  "robust": 5,
+  "recovered": 3,
+  "inside": 4,
+  "g2_fail": 0,
+  "joint_fail": 1,
+  "border": 2
+ },
+ "E5A_noshield|ba:normal": {
+  "robust": 8,
+  "recovered": 6,
+  "inside": 7,
+  "g2_fail": 0,
+  "joint_fail": 1,
+  "border": 3
+ },
+ "E5A_noshield|ladder:following:0": {
+  "robust": 148,
+  "recovered": 142,
+  "inside": 145,
+  "g2_fail": 0,
+  "joint_fail": 3,
+  "border": 7
+ },
+ "E5B_hwshield|ba:aggressive": {
+  "robust": 11,
+  "recovered": 11,
+  "inside": 10,
+  "g2_fail": 0,
+  "joint_fail": 1,
+  "border": 2
+ },
+ "E5B_hwshield|ba:cautious": {
+  "robust": 6,
+  "recovered": 6,
+  "inside": 5,
+  "g2_fail": 0,
+  "joint_fail": 1,
+  "border": 1
+ },
+ "E5B_hwshield|ba:normal": {
+  "robust": 9,
+  "recovered": 9,
+  "inside": 8,
+  "g2_fail": 0,
+  "joint_fail": 1,
+  "border": 2
+ },
+ "E5B_hwshield|ladder:following:0": {
+  "robust": 149,
+  "recovered": 149,
+  "inside": 146,
+  "g2_fail": 0,
+  "joint_fail": 3,
+  "border": 8
+ }
+}

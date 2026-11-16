@@ -1,0 +1,7 @@
+Item,Cost
+training,"2.25 M steps per seed (1.4–1.8 h), about 68,000 reference replays (estimate)"
+shield,"15.8 reference replays per attack on average (maximum 84), about 6.3 s of wall-clock time per attack in a single process"
+boundary plan,a one-off 200-plan reference grid and 36 reference runs per case
+verification replays,1.9 SUT replays per detection
+screening,142 reference replays per SUT query (MiTra: 134)
+Autoware,"about 20 s of wall-clock time per query; confirmation needs four reruns per reported failure; the screened refinement used fewer queries but more instance time than the unscreened one (2.20 versus 1.57 h for AW-default, 5.92 versus 4.52 h for AW-r157; queries 256 versus 341 and 659 versus 961), because the reference replays ran serially on the Autoware instance; they can run in parallel"

@@ -1,0 +1,61 @@
+{
+ "variant": "aw_default",
+ "files": {
+  "common.param.yaml": "autoware_launch/config/planning/scenario_planning/common/common.param.yaml",
+  "control_command_gate.param.yaml": "autoware_launch/config/control/control_command_gate/control_command_gate.param.yaml",
+  "vehicle_cmd_gate.param.yaml": "autoware_launch/config/control/vehicle_cmd_gate/vehicle_cmd_gate.param.yaml",
+  "mrm_emergency_stop_operator.param.yaml": "autoware_launch/config/system/mrm_emergency_stop_operator/mrm_emergency_stop_operator.param.yaml",
+  "obstacle_cruise.param.yaml": "autoware_launch/config/planning/scenario_planning/lane_driving/motion_planning/motion_velocity_planner/obstacle_cruise.param.yaml",
+  "simulator_model.param.yaml": "sample_vehicle_description/config/simulator_model.param.yaml",
+  "operation_mode_transition_manager.param.yaml": "autoware_launch/config/control/operation_mode_transition_manager/operation_mode_transition_manager.param.yaml",
+  "velocity_smoother.param.yaml": "autoware_launch/config/planning/scenario_planning/common/autoware_velocity_smoother/velocity_smoother.param.yaml",
+  "behavior_path_planner.param.yaml": "autoware_launch/config/planning/scenario_planning/lane_driving/behavior_planning/behavior_path_planner/behavior_path_planner.param.yaml"
+ },
+ "changes": [
+  {
+   "file": "operation_mode_transition_manager.param.yaml",
+   "before": "enable_engage_on_driving: false",
+   "after": "enable_engage_on_driving: true"
+  },
+  {
+   "file": "common.param.yaml",
+   "before": "max_vel: 4.17",
+   "after": "max_vel: 40.0"
+  },
+  {
+   "file": "control_command_gate.param.yaml",
+   "before": "vel_lim: 25.0",
+   "after": "vel_lim: 40.0"
+  },
+  {
+   "file": "vehicle_cmd_gate.param.yaml",
+   "before": "vel_lim: 25.0",
+   "after": "vel_lim: 40.0"
+  },
+  {
+   "file": "velocity_smoother.param.yaml",
+   "before": "extract_ahead_dist: 200.0",
+   "after": "extract_ahead_dist: 800.0"
+  },
+  {
+   "file": "velocity_smoother.param.yaml",
+   "before": "max_trajectory_length: 200.0",
+   "after": "max_trajectory_length: 800.0"
+  },
+  {
+   "file": "velocity_smoother.param.yaml",
+   "before": "min_trajectory_length: 180.0",
+   "after": "min_trajectory_length: 700.0"
+  },
+  {
+   "file": "velocity_smoother.param.yaml",
+   "before": "post_max_trajectory_length: 300.0",
+   "after": "post_max_trajectory_length: 800.0"
+  },
+  {
+   "file": "behavior_path_planner.param.yaml",
+   "before": "forward_path_length: 300.0",
+   "after": "forward_path_length: 800.0"
+  }
+ ]
+}

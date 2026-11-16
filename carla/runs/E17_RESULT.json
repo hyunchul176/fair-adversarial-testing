@@ -1,0 +1,267 @@
+{
+ "A": {
+  "seeds": [
+   "s1",
+   "s2",
+   "s3"
+  ],
+  "by_kind": {
+   "ladder:following:0": {
+    "n": 186,
+    "robust": 125,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 61,
+    "error": 0,
+    "robust_rate": 67.2,
+    "ci": [
+     57.5,
+     75.3
+    ]
+   },
+   "ladder:following_aeb:0": {
+    "n": 186,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 186,
+    "error": 0,
+    "robust_rate": 0.0,
+    "ci": [
+     0.0,
+     0.0
+    ]
+   },
+   "ladder:rss_sut:0": {
+    "n": 186,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 186,
+    "error": 0,
+    "robust_rate": 0.0,
+    "ci": [
+     0.0,
+     0.0
+    ]
+   },
+   "ladder:rss_lat_sut:0": {
+    "n": 186,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 186,
+    "error": 0,
+    "robust_rate": 0.0,
+    "ci": [
+     0.0,
+     0.0
+    ]
+   },
+   "ba:cautious": {
+    "n": 186,
+    "robust": 5,
+    "fair": 2,
+    "attacker": 0,
+    "other": 0,
+    "none": 179,
+    "error": 0,
+    "robust_rate": 2.7,
+    "ci": [
+     0.0,
+     7.0
+    ]
+   },
+   "ba:normal": {
+    "n": 186,
+    "robust": 5,
+    "fair": 2,
+    "attacker": 0,
+    "other": 0,
+    "none": 179,
+    "error": 0,
+    "robust_rate": 2.7,
+    "ci": [
+     0.0,
+     7.0
+    ]
+   },
+   "ba:aggressive": {
+    "n": 186,
+    "robust": 4,
+    "fair": 3,
+    "attacker": 0,
+    "other": 0,
+    "none": 179,
+    "error": 0,
+    "robust_rate": 2.2,
+    "ci": [
+     0.0,
+     5.4
+    ]
+   },
+   "tm:default": {
+    "n": 186,
+    "robust": 0,
+    "fair": 2,
+    "attacker": 0,
+    "other": 0,
+    "none": 184,
+    "error": 0,
+    "robust_rate": 0.0,
+    "ci": [
+     0.0,
+     0.0
+    ]
+   }
+  },
+  "attacker": 0,
+  "runs": 1488
+ },
+ "B": {
+  "seeds": [
+   "s1",
+   "s2",
+   "s3"
+  ],
+  "by_kind": {
+   "ladder:following:0": {
+    "n": 186,
+    "robust": 123,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 63,
+    "error": 0,
+    "robust_rate": 66.1,
+    "ci": [
+     57.0,
+     74.2
+    ]
+   },
+   "ladder:following_aeb:0": {
+    "n": 186,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 186,
+    "error": 0,
+    "robust_rate": 0.0,
+    "ci": [
+     0.0,
+     0.0
+    ]
+   },
+   "ladder:rss_sut:0": {
+    "n": 186,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 186,
+    "error": 0,
+    "robust_rate": 0.0,
+    "ci": [
+     0.0,
+     0.0
+    ]
+   },
+   "ladder:rss_lat_sut:0": {
+    "n": 186,
+    "robust": 0,
+    "fair": 0,
+    "attacker": 0,
+    "other": 0,
+    "none": 186,
+    "error": 0,
+    "robust_rate": 0.0,
+    "ci": [
+     0.0,
+     0.0
+    ]
+   },
+   "ba:cautious": {
+    "n": 186,
+    "robust": 0,
+    "fair": 9,
+    "attacker": 0,
+    "other": 0,
+    "none": 177,
+    "error": 0,
+    "robust_rate": 0.0,
+    "ci": [
+     0.0,
+     0.0
+    ]
+   },
+   "ba:normal": {
+    "n": 186,
+    "robust": 0,
+    "fair": 9,
+    "attacker": 0,
+    "other": 0,
+    "none": 177,
+    "error": 0,
+    "robust_rate": 0.0,
+    "ci": [
+     0.0,
+     0.0
+    ]
+   },
+   "ba:aggressive": {
+    "n": 186,
+    "robust": 0,
+    "fair": 9,
+    "attacker": 0,
+    "other": 0,
+    "none": 177,
+    "error": 0,
+    "robust_rate": 0.0,
+    "ci": [
+     0.0,
+     0.0
+    ]
+   },
+   "tm:default": {
+    "n": 186,
+    "robust": 0,
+    "fair": 2,
+    "attacker": 0,
+    "other": 0,
+    "none": 184,
+    "error": 0,
+    "robust_rate": 0.0,
+    "ci": [
+     0.0,
+     0.0
+    ]
+   }
+  },
+  "attacker": 0,
+  "runs": 1488
+ },
+ "E17_H1": {
+  "A": 0,
+  "A_share": 0.0,
+  "B": 0,
+  "supported": false
+ },
+ "E17_H2": {
+  "following_H0": 67.2,
+  "supported": false
+ },
+ "E17_H3": {
+  "rates": {
+   "ladder:following_aeb:0": 0.0,
+   "ladder:rss_sut:0": 0.0,
+   "ladder:rss_lat_sut:0": 0.0,
+   "tm:default": 0.0
+  },
+  "supported": true
+ }
+}
