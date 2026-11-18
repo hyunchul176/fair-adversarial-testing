@@ -203,7 +203,7 @@ class AggressivenessCalculator:
     def get_per_feature_distances(self) -> dict:
         """
         Compute per-feature distributional distances for detailed analysis.
-        Used in ablation studies and paper figures (Fig. 7).
+        Used in ablation studies and paper figures.
         """
         if len(self.feature_buffer) < self.window_size // 2:
             return {name: 0.0 for name in self.FEATURE_NAMES}

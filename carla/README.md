@@ -106,11 +106,11 @@ scripts.
 
 ## Top views and the physics check
 
-`topview_physics/` re-records, with the corrected harness, the CARLA top views of Figs. 1 and 4 of the paper
+`topview_physics/` re-records, with the corrected harness, the CARLA top views of Figs. 1 and 6 of the paper
 (`docs/method_details.md`, Section S4.3) and of a former supplementary figure (S3). It also runs the three attack
 shapes of a former Fig. 7 with CARLA physics (`docs/additional_results.md`, Section S13.5).
 
-- `run_select_physics.sh` chooses the attack of Fig. 4 and runs the physics checks.
+- `run_select_physics.sh` chooses the attack of Fig. 6 and runs the physics checks.
 - `run_render.sh` renders the frames with `fairtest.carla_bev`.
 - `make_search_row.py` rebuilds the plan of the former Fig. S3(b) from the search of E4.
 - The stored trajectories that these scripts replay are not included, for the reason given above.

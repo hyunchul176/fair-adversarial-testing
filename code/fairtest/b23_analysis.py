@@ -22,7 +22,7 @@ conditional attribution (FSM, among collisions), feint share (lane reversals aft
 across the ladder (range weakest - longitudinal RSS, RSS rate, Kendall tau vs the capability rank); mean and
 spread over training seeds; a case-level bootstrap 95% CI of the seed-averaged fair-failure rate. When present:
   margin_<dataset>.jsonl (b23_margin)     robust fair failures: front contact and CC clearance >= 0.5 m (G4)
-  cross_<dataset>.jsonl (b23_crossjudge)  share of collisions that the Dynasto ISO 34502 rules call valid
+  cross_<dataset>.jsonl (b23_crossjudge)  share of collisions that the Dynasto validity rules call valid
 
   python -m fairtest.b23_analysis e1 OUT.json [--dir EVAL_DIR]
 

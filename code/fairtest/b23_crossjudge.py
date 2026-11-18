@@ -1,7 +1,7 @@
 """B23: judge every RL adversary's collisions with the Dynasto validity rules as well (G2-style cross-judgement).
 
 Reads B17-format evaluation rows (with the realised action sequence), replays each valid SUT collision against
-the SUT with the full trace, and applies `rl_baselines.dynasto_validity` (ISO 34502 safe distances, tau 0.2 s):
+the SUT with the full trace, and applies `rl_baselines.dynasto_validity` (safe distances of the validity rules, tau 0.2 s):
 the collision is 'Dynasto-valid' unless the adversary cut in or braked unsafely, or rear-ended the ego.
 The CC/FSM/RSS judgements of the same collisions are already in the evaluation rows.
 

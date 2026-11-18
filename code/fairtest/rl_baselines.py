@@ -1,7 +1,7 @@
 """B23 literature baselines for the RL adversary, re-implemented from the papers in the B8/B17 environment.
 
 dynasto  Humeniuk et al., "Dynasto" (arXiv 2603.21427): validity-aware adversary in HighwayEnv.
-         Safe distances (ISO 34502-inspired; tau_r = 0.2 s, |a| = 5 m/s^2, d_min 5 m longitudinal / 2 m lateral):
+         Safe distances of the validity rules (tau_r = 0.2 s, |a| = 5 m/s^2, d_min 5 m longitudinal / 2 m lateral):
            d_lon = 1/2 (v_l^2/a_l - v_f^2/a_f) + v_f tau_r + d_min_lon          (a_l = a_f = -5)
            d_lat = v_lat tau_r + 1/2 a_lat tau_r^2 + (v_lat + a_lat tau_r)^2 / (2 b_lat) + d_min_lat
          Dense reward R_coll(t) = (d_safe - d_c) / d_safe if d_c < d_safe else 0 (per decision step).

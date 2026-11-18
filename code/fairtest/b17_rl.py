@@ -17,8 +17,8 @@ Rewards
            fair_guarded2 reward structure (fair failure + 0.2 x CC-demand shaping - 0.3 attacker-at-fault - invalid) with
            G1 commitment on/off and G2 realistic-cut-in requirement on/off (abl_none: neither, abl_commit: G1 only,
            abl_real: G2 only). Warm starts: collide (no commitment) or collide_commit at 750k steps.
-  dynasto / cars (B23 literature baselines, `rl_baselines.py`): the Dynasto validity-aware reward (ISO 34502
-           safe-distance rules, dense collision-likelihood term) and the CARS RL fine-tuning reward (progress,
+  dynasto / cars (B23 literature baselines, `rl_baselines.py`): the Dynasto validity-aware reward (safe-distance
+           validity rules, dense collision-likelihood term) and the CARS RL fine-tuning reward (progress,
            lateral proximity and closing, collision bonus, time penalty); per-decision dense rewards, no commitment,
            no reference-driver information during training.
   cars_commit (B74, review of manuscript v7, item R3): the cars reward with lane-change commitment (G1) during

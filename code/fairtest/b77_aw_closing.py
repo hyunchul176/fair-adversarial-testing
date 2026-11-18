@@ -3,7 +3,7 @@
 
 closing = Autoware ego speed - adversary longitudinal speed at the first tick with clearance <= 0, the quantity of
 b51_severity (target vx - generator vx at contact); the map is straight, so the ego speed is its longitudinal speed.
-Reported failures and confirmed ones (>= 2 of 4 open-loop reruns collide) as in aw_export, i.e. the failures of Fig. 7;
+Reported failures and confirmed ones (>= 2 of 4 open-loop reruns collide) as in aw_export;
 pairs: the same case and source (policy seed or refinement) confirmed under both variants.
 
   python -m fairtest.b77_aw_closing B59_DIR OUT.json
