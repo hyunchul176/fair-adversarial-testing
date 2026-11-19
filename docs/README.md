@@ -2,7 +2,7 @@
 
 These documents hold the supplementary material of the paper "Fair adversarial testing of automated vehicles in highway cut-ins: reference-shielded attacks and a capability-controlled evaluation", kept in this repository as records instead of being published with the paper, and details that the paper gives only in summary. The text is verbatim from the supplement draft v13 (2026-10-12; text as of 2026-11-14) and from an earlier, longer draft of the paper, without HTML comments and without the figures of the supplement, and with the corrections of 2026-11-14, 2026-11-16 and 2026-11-18 listed in the last section.
 
-Where these documents use codes, the paper uses names. G1 is commitment and G2 is the naturalistic envelope. In the pre-specified evaluations of the final agent, P1 is the discrimination criterion, P2 is reference agreement and P3 is the contrast with collision seeking. K1 is original specificity and K2 is severe-only discrimination. In the MiTra protocol of the earlier version, P2 was original specificity. The ledgers keep the codes as identifiers.
+Where these documents use codes, the paper uses names. G1 is commitment and G2 is the naturalistic envelope. In the pre-specified evaluations of the final agent, P1 is the discrimination criterion, P2 is reference agreement and P3 is the contrast with collision seeking. K1 is original specificity and K2 is severe-only discrimination. In the MiTra protocol of the earlier version, P2 was original specificity. The ledgers keep the codes as identifiers. A collision that the reference driver cannot avoid either is reference-unavoidable, as in the paper. The code, the stored results and the frozen protocols call it attacker-caused (for example `attacker_caused` in result files), and the hypothesis ledger abbreviates it as att.
 
 ## Contents
 
@@ -26,34 +26,34 @@ These documents keep the internal codes of the project, which the paper does not
 | Code | What it is | Paper |
 |---|---|---|
 | v2s | the agent: the policy stage with the screened refinement | Sections 4 and 6 |
-| v2s-S | the agent with the 3 m/s severity floor | 4.4, 6.1, 6.5 |
-| v2j, v2j-S | the earlier version: the same policy stage with the unscreened refinement, and the same with the severity floor | 5.1, 6.1, 6.5 to 6.7 |
+| v2s-S | the agent with the 3 m/s severity floor | 4.4, 6.1, 6.3 |
+| v2j, v2j-S | the earlier version: the same policy stage with the unscreened refinement, and the same with the severity floor | 5.1, 6.1, 6.3 to 6.5 |
 | v1, v2 | earlier prototypes, before the guards in the refinement (v1) and before joint realism (v2) | none |
 | Dev, Dev-62 | the 62 highD development cases (in-sample) | 5.1, Table 2 |
-| B9-148, hD-R | the 148 reserved highD cases, reused post hoc | 5.2, Table 2 |
-| B9, B13, B28 | pre-specified evaluations of earlier designs on the reserved highD, NGSIM and TGSIM cases | 5.2, Table 2 |
+| B9-148, hD-R | the 148 reserved highD cases, reused post hoc | 5.1, Table 2 |
+| B9, B13, B28 | pre-specified evaluations of earlier designs on the reserved highD, NGSIM and TGSIM cases | 5.1, Table 2 |
 | B7, B14, B16, B17, B21, B24 to B26, B29, B32, B33, B36, B39, B39b, B40, B45 to B47, B49 | design experiments on the development cases: reference driver, guards, shield, refinement, reward, joint realism and success contract | design choices only (Sections 3 to 5), see design_decisions.md |
-| B23 | baselines, and the guard ablation of the earlier unshielded policy | 6.2, Fig. 5 |
+| B23 | baselines, and the guard ablation of the earlier unshielded policy | 6.4, Fig. 8 |
 | B41 | pre-specified MiTra evaluation of the earlier version | 6.1, Table 4 |
 | B30, B34, B42 to B44 | deceleration and cut-out studies in one dimension (1-D), and their re-execution in CARLA | none |
-| B51, B63, B64 | severity floor (earlier version, the agent) and detection without light contacts | 4.4, 6.1, 6.5 |
-| B52, B66, B74 | feasibility-referenced and CARS-style baselines, and checks of them | 6.2 |
-| B54, B55, B59 | Autoware on the development cases: first run, cause test, screened refinement | 6.6, 6.7 |
-| B56 | screened against unscreened refinement | 6.6 |
-| B57, B65 | human-like driver population (earlier version, the agent) | 6.4 |
+| B51, B63, B64 | severity floor (earlier version, the agent) and detection without light contacts | 4.4, 6.1, 6.3 |
+| B52, B66, B74 | feasibility-referenced and CARS-style baselines, and checks of them | 6.4 |
+| B54, B55, B59 | Autoware on the development cases: first run, cause test, screened refinement | 6.4, 6.5 |
+| B56 | screened against unscreened refinement | 6.4 |
+| B57, B65 | human-like driver population (earlier version, the agent) | 6.3 |
 | B58, B60, B62 | Autoware with perception latency, noise or missed detections, and retraining against a driver population | none (removed on 2026-11-16) |
-| B61, B81 | controls derived from C (development, exiD) | 6.3 |
+| B61, B81 | controls derived from C (development, exiD) | 6.2 |
 | B67 | two further random streams of the refinement | none |
-| B68 | reference readings of the CARS code | 6.4, Table 5 |
-| B69 | SUMO and CommonRoad SUTs | 6.7 |
-| B70, B72 | pre-specified HIGH-SIM evaluation of the agent, and its extension to all 144 cases | 6.1, Table 4, 6.5, Fig. 8 |
+| B68 | reference readings of the CARS code | 6.3, Table 5 |
+| B69 | SUMO and CommonRoad SUTs | 6.5 |
+| B70, B72 | pre-specified HIGH-SIM evaluation of the agent, and its extension to all 144 cases | 6.1, Table 4, 6.3, Fig. 7 |
 | B71, B82 | pre-specified exiD evaluation of the agent, and the 203 further exiD cases | 6.1, Table 4 |
-| B73 | contact geometry | 6.3 |
-| B75, B76, B78, B79 | searches again under stricter realism, with other margins and severity floors, with braking bounds and from behind the follower | 6.5 |
-| B77 | learning versus search, and the reference readings, on the pre-specified data | 6.4, Table 5, 6.6, Fig. 9 |
-| B80 | Autoware on exiD | 6.7 |
-| B83 | controlled ablation of the policy stage | 6.6, Table 6 |
-| CARLA-… | CARLA experiments of the agent | 6.7, Table 7 |
+| B73 | contact geometry | 6.2 |
+| B75, B76, B78, B79 | searches again under stricter realism, with other margins and severity floors, with braking bounds and from behind the follower | 6.3 |
+| B77 | learning versus search, and the reference readings, on the pre-specified data | 6.3, Table 5, 6.4, Fig. 9 |
+| B80 | Autoware on exiD | 6.5 |
+| B83 | controlled ablation of the policy stage | 6.4, Table 6 |
+| CARLA-… | CARLA experiments of the agent | 6.5, Table 7 |
 
 ## Where each part of the supplementary material is
 
@@ -84,7 +84,7 @@ These documents keep the internal codes of the project, which the paper does not
 | S8 Design-decision ledger, Table S11 | design_decisions.md |  |
 | S9 Hypothesis ledger, Tables S12 and S13 | hypothesis_ledger.md |  |
 | S10 Data and code availability | paper | merged into the paper's 'Data and code availability' |
-| S11 Detailed development results, Table S14, Figs. S7 and S8 | additional_results.md | the paper's Fig. 7 shows the 17 main SUTs; Table S14 and the values of Fig. S8 also as CSV; the figures are left out |
+| S11 Detailed development results, Table S14, Figs. S7 and S8 | additional_results.md | the paper's Fig. 6 shows the 17 main SUTs; Table S14 and the values of Fig. S8 also as CSV; the figures are left out |
 | S12 Further related work | left out |  |
 | S13 Follow-up experiments, Table S15 | additional_results.md | their criteria and verdicts are also rows of the hypothesis ledger |
 
@@ -99,30 +99,30 @@ Each document lists them in its section "Moved from the paper", grouped by the s
 | method_details.md | 4.4 Reference-guided boundary plan and screened refinement, now Section 4.4 | **Open-loop plan space and initialisation.** The refinement searches a f… |
 | method_details.md | 4.4 Reference-guided boundary plan and screened refinement, now Section 4.4 | **Screening before the query and candidate generation.** Before an SUT q… |
 | method_details.md | 4.4 Reference-guided boundary plan and screened refinement, now Section 4.4 | **Objective and cost of GP-BO.** The refinement aims to reduce the SUT's… |
-| method_details.md | 5.2 Scenario cohorts and experimental environments, now Section 5.2 | HIGH-SIM and exiD cut-ins are extracted with the same highD event rule, … |
-| method_details.md | 5.2 Scenario cohorts and experimental environments, now Section 5.2 | For exiD we use release v2.1, 93 recordings (16.1 hours) from seven moto… |
-| method_details.md | 5.2 Scenario cohorts and experimental environments, now Section 5.2 | CARLA 0.9.16 [Dosovitskiy et al. 2017] provides a second execution envir… |
-| method_details.md | 5.6 Pre-registered hypotheses and decision rules, now Section 5.6 | **Sample size and power.** The numbers of cases were set by the protocol… |
-| method_details.md | 5.6 Pre-registered hypotheses and decision rules, now Section 5.6 | **Statistical decisions and evidence status.** Policy-stage results are … |
-| additional_results.md | 5.4 Baselines and component analyses, now Section 5.4 | **Learning efficiency and further variants.** We compare, by SUT-query b… |
-| additional_results.md | 6.3 Detection ordered by designed capability, now Section 6.3 | Fig. 6 shows these differences on a single attack, in development case 2… |
-| additional_results.md | 6.3 Detection ordered by designed capability, now Section 6.3 | The same controls kept this order on the 120 exiD cut-ins. This was a po… |
-| additional_results.md | 6.3 Detection ordered by designed capability, now Section 6.5, without the margin result | A follow-up experiment that changed the margin C itself must keep reran … |
-| additional_results.md | 6.4 Failures of competent SUTs and specificity, now Section 6.3 | The failing AEB cases began at a median natural headway of 0.99–1.20 s, … |
-| additional_results.md | 6.5 Sensitivity to the reference, realism and scenario mix, now Section 6.5 | To check this reading further, we extended the evaluation, after seeing … |
-| additional_results.md | 6.5 Sensitivity to the reference, realism and scenario mix, now Section 6.5 | To check whether the slower cut-ins are an artefact of the initial place… |
-| additional_results.md | 6.6 External software and simulators, now Section 6.7 | **Autoware on the development cases.** To examine whether the agent appl… |
-| additional_results.md | 6.6 External software and simulators, now Section 6.7 | To separate first reports from reproduced failures of this non-determini… |
-| additional_results.md | 6.6 External software and simulators, now Section 6.7 | A failure that the earlier version's refinement found against AW-r157 on… |
+| method_details.md | 5.2 Scenario cohorts and experimental environments, now Section 5.1 | HIGH-SIM and exiD cut-ins are extracted with the same highD event rule, … |
+| method_details.md | 5.2 Scenario cohorts and experimental environments, now Section 5.1 | For exiD we use release v2.1, 93 recordings (16.1 hours) from seven moto… |
+| method_details.md | 5.2 Scenario cohorts and experimental environments, now Section 5.1 | CARLA 0.9.16 [Dosovitskiy et al. 2017] provides a second execution envir… |
+| method_details.md | 5.6 Pre-registered hypotheses and decision rules, now Section 5.4 | **Sample size and power.** The numbers of cases were set by the protocol… |
+| method_details.md | 5.6 Pre-registered hypotheses and decision rules, now Section 5.4 | **Statistical decisions and evidence status.** Policy-stage results are … |
+| additional_results.md | 5.4 Baselines and component analyses, now Section 5.3 | **Learning efficiency and further variants.** We compare, by SUT-query b… |
+| additional_results.md | 6.3 Detection ordered by designed capability, now Section 6.2 | Fig. 5 shows these differences on a single attack, in development case 2… |
+| additional_results.md | 6.3 Detection ordered by designed capability, now Section 6.2 | The same controls kept this order on the 120 exiD cut-ins. This was a po… |
+| additional_results.md | 6.3 Detection ordered by designed capability, now Section 6.3, without the margin result | A follow-up experiment that changed the margin C itself must keep reran … |
+| additional_results.md | 6.4 Failures of competent SUTs and specificity, now Section 6.2 | The failing AEB cases began at a median natural headway of 0.99–1.20 s, … |
+| additional_results.md | 6.5 Sensitivity to the reference, realism and scenario mix, now Section 6.3 | To check this reading further, we extended the evaluation, after seeing … |
+| additional_results.md | 6.5 Sensitivity to the reference, realism and scenario mix, now Section 6.3 | To check whether the slower cut-ins are an artefact of the initial place… |
+| additional_results.md | 6.6 External software and simulators, now Section 6.5 | **Autoware on the development cases.** To examine whether the agent appl… |
+| additional_results.md | 6.6 External software and simulators, now Section 6.5 | To separate first reports from reproduced failures of this non-determini… |
+| additional_results.md | 6.6 External software and simulators, now Section 6.5 | A failure that the earlier version's refinement found against AW-r157 on… |
 | additional_results.md | 6.6 External software and simulators, no longer in the paper (removed on 2026-11-16) | We also injected faults into the object list of the configuration with b… |
-| additional_results.md | 6.6 External software and simulators, now Section 6.7 | **Autoware on exiD (post-hoc reuse).** We applied Autoware to the 120 ex… |
-| additional_results.md | 6.6 External software and simulators, now Section 6.7 | Table D1 (that draft's Table 4, CARLA, the paper's Table 7) in full, with its note |
-| additional_results.md | 6.6 External software and simulators, now Section 6.7 | **CARLA: a wider vehicle.** A wider SUT lowered detection even when the … |
-| additional_results.md | 6.6 External software and simulators, now Section 5.2 | These CARLA results were obtained after correcting the harness (Section … |
-| additional_results.md | 6.7 Learning, screening and query cost, now Section 6.6 | At the full budget of 36–37 queries, the agent and the screened GP-BO al… |
-| additional_results.md | 6.7 Learning, screening and query cost, now Section 6.6 | **Contributions of screening and the search model.** On the development … |
-| additional_results.md | 6.7 Learning, screening and query cost, now Section 6.6 | Screening, which checks admissibility before the query, and the search m… |
-| additional_results.md | 6.7 Learning, screening and query cost, now Section 6.6 | Computational cost, too, has to be assessed separately for SUT queries a… |
+| additional_results.md | 6.6 External software and simulators, now Section 6.5 | **Autoware on exiD (post-hoc reuse).** We applied Autoware to the 120 ex… |
+| additional_results.md | 6.6 External software and simulators, now Section 6.5 | Table D1 (that draft's Table 4, CARLA, the paper's Table 7) in full, with its note |
+| additional_results.md | 6.6 External software and simulators, now Section 6.5 | **CARLA: a wider vehicle.** A wider SUT lowered detection even when the … |
+| additional_results.md | 6.6 External software and simulators, now Section 5.1 | These CARLA results were obtained after correcting the harness (Section … |
+| additional_results.md | 6.7 Learning, screening and query cost, now Section 6.4 | At the full budget of 36–37 queries, the agent and the screened GP-BO al… |
+| additional_results.md | 6.7 Learning, screening and query cost, now Section 6.4 | **Contributions of screening and the search model.** On the development … |
+| additional_results.md | 6.7 Learning, screening and query cost, now Section 6.4 | Screening, which checks admissibility before the query, and the search m… |
+| additional_results.md | 6.7 Learning, screening and query cost, now Section 6.4 | Computational cost, too, has to be assessed separately for SUT queries a… |
 
 ## Left out of the moved text
 
@@ -155,3 +155,5 @@ Later on 2026-11-16 the documents were aligned further with the paper. "Prospect
 In a third pass on 2026-11-16, release_notes.md was added. It lists the records that the authors keep and make available on request, the protocols of the pre-specified evaluations and the outcomes of earlier pre-registrations. The hypothesis ledger gained rows for the tiers of B77 on HIGH-SIM and exiD. References to files that are not published here now name the experiment and say that the record is available on request, and one alternative in row 18 of the design-decision ledger that referred to such a record was removed. The code package is named as published, and the word counts above were updated.
 
 On 2026-11-18 the paper added a figure of the testing problem (Fig. 2), a figure of the evaluation protocol (Fig. 4) and a table of the admissible ranges of the naturalistic envelope (Table 1), and the references to the paper's figures and tables were updated again. The budget figure is now Fig. 9 and the CARLA table Table 7. On the same day the codes G1, G2, P1–P3, K1 and K2 were matched to the paper's names, the Dynasto-style rules lost their ISO 34502 label, and lateral RSS is now said to be designed, not guaranteed, to dominate C.
+
+On 2026-11-19 the paper merged Sections 2.2 and 2.3, grouped Section 5 into four sections and Section 6 into five, and renumbered Figs. 5 to 8. Fig. 5 is now the CARLA top view of the capability ladder, Fig. 6 the detection of the 17 main SUTs, Fig. 7 detection by initial time headway and Fig. 8 the baselines. The paper also renamed attacker-caused collisions reference-unavoidable, with the same definition. These documents now use the new term and the paper's new section and figure numbers. Headings and notes that quote the earlier draft keep its numbers.

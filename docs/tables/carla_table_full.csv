@@ -1,4 +1,4 @@
-Condition,Following H0,BehaviorAgent: cautious / normal / aggressive,AEB H0 / longitudinal RSS / lateral RSS / Traffic Manager,Attacker-caused
+Condition,Following H0,BehaviorAgent: cautious / normal / aggressive,AEB H0 / longitudinal RSS / lateral RSS / Traffic Manager,Reference-unavoidable
 "Shielded policy, matched twin","86.6 [78.5, 93.5]",3.8 / 5.9 / 7.0,0 / 0 / 0 / 0,"0 of 1,488 runs"
 Policy without shield,79.6,2.7 / 4.3 / 4.8,0 / 0 / 0 / 0,"99 of 1,488 runs"
 "Shielded policy, default twin",80.1,3.2 / 4.8 / 5.9,0 / 0 / 0 / 0,"4 of 1,488 runs"
